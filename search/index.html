@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6eddb">
+<title>搜索 · 才元刘氏先世著作</title>
+<meta name="description" content="在才元刘氏先世七部著作的原文与白话中搜索人名、地名、诗句。">
+<style>
+:root{
+  --paper:#f6eddb; --paper2:#eee0c3; --card:#fbf5ea; --ink:#2b231c; --ink2:#5c4f42; --ink3:#6e5f52;
+  --line:#dccaa8; --red:#a3422a; --red2:#cb653e; --hl:rgba(203,101,62,.11);
+  --shadow:0 1px 2px rgba(60,40,20,.05),0 4px 16px rgba(60,40,20,.05);
+  --serif-tc:"Noto Serif CJK TC","Source Han Serif TC","Noto Serif TC","Songti TC","STSongti-TC-Regular","PMingLiU",serif;
+  --serif-sc:"Noto Serif CJK SC","Source Han Serif SC","Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif-sc);font-size:16px;line-height:1.8;line-break:strict}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px;border-radius:6px}
+:root{--sn-w:880px}
+.wrap{max-width:880px;margin:0 auto;padding:48px 16px 64px}
+h1{font-family:var(--serif-tc);font-weight:600;font-size:28px;letter-spacing:.16em;margin:22px 0 0}
+.lead{color:var(--ink2);margin:14px 0 0;max-width:36em}
+.by{font-size:13px;color:var(--ink3);margin-top:10px}
+.a{font-size:13px;color:var(--ink3)}
+.d{margin:4px 0 0;color:var(--ink2);font-size:15px}
+.tag{display:inline-block;font-family:var(--sans);font-size:12px;color:var(--red);border:1px solid currentColor;border-radius:4px;padding:0 6px;margin-left:8px;vertical-align:2px;letter-spacing:0}
+.ask{margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);color:var(--ink2)}
+.ask a{color:var(--red)}
+footer{margin-top:48px;font-size:13px;color:var(--ink3);border-top:1px solid var(--line);padding-top:18px}
+@media (max-width:600px){
+  .wrap{padding-top:32px}
+  h1{font-size:24px}
+  .t{font-size:17px}
+}
+
+form{display:flex;gap:8px;margin:22px 0 0}
+input[type=search]{flex:1;min-width:0;font:inherit;font-size:17px;padding:9px 14px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+input[type=search]:focus{outline:2px solid var(--red2);outline-offset:1px}
+form button{font-family:var(--sans);font-size:15px;padding:0 18px;border-radius:10px;border:1px solid var(--red);background:var(--red);color:#fff;cursor:pointer}
+.tip{font-family:var(--sans);font-size:13px;color:var(--ink3);margin:10px 0 0}
+.tip a{color:var(--red);text-decoration:none;margin-right:10px;cursor:pointer}
+.stat{font-family:var(--sans);font-size:13px;color:var(--ink3);margin:28px 0 4px}
+.filt{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 4px}
+.filt button{font-family:var(--sans);font-size:13px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:3px 12px;color:var(--ink2);cursor:pointer}
+.filt button[aria-pressed=true]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.res{list-style:none;margin:8px 0 0;padding:0}
+.res li{border-bottom:1px solid var(--line)}
+.res a{display:block;padding:14px 4px;text-decoration:none}
+.res a:hover{background:var(--hl)}
+.res .bk{font-family:var(--sans);font-size:12px;color:var(--ink3)}
+.res .tt{font-family:var(--serif-tc);font-size:17px;color:var(--ink);margin:2px 0 4px;letter-spacing:.04em}
+.res .sn{color:var(--ink2);font-size:15px;line-height:1.75}
+.res .sn.by{font-family:var(--serif-sc);font-size:14px;color:var(--ink3);margin-top:2px}
+mark{background:rgba(203,101,62,.22);color:inherit;border-radius:2px;padding:0 1px}
+.more{display:block;margin:18px auto 0;font-family:var(--sans);font-size:14px;border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 18px;color:var(--ink2);cursor:pointer}
+.empty{color:var(--ink3);margin:30px 0}
+</style>
+<style id="site-nav-css">
+.site-nav{background:#f6eddb;border-bottom:1px solid #dccaa8;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.5}
+.site-nav .sn-in{max-width:var(--sn-w,1280px);margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-nav a{text-decoration:none}
+.site-nav .sn-home{font-family:"Noto Serif CJK TC","Source Han Serif TC","Noto Serif TC","Songti TC","STSongti-TC-Regular","PMingLiU",serif;font-size:15px;font-weight:600;letter-spacing:.1em;color:#2b231c;white-space:nowrap;padding:9px 0;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.site-nav .sn-home:hover{color:#a3422a}
+.site-nav .sn-links{display:flex;gap:22px;flex:none}
+.site-nav .sn-links a{font-size:14px;color:#5c4f42;letter-spacing:.06em;padding:9px 0 7px;border-bottom:2px solid transparent;white-space:nowrap}
+.site-nav .sn-links a:hover{color:#a3422a}
+.site-nav .sn-links a[aria-current]{color:#a3422a;border-bottom-color:rgba(163,66,42,.4)}
+.site-nav .sn-s{display:none}
+@media (max-width:420px){
+  .site-nav .sn-in{padding:0 14px;gap:8px}
+  .site-nav .sn-links{gap:14px}
+  .site-nav .sn-home{font-size:14px;letter-spacing:.06em}
+  .site-nav .sn-links a{font-size:13.5px;letter-spacing:.02em}
+}
+@media (max-width:374px){.site-nav .sn-f{display:none}.site-nav .sn-s{display:inline}}
+@media print{.site-nav{display:none}}
+</style>
+</head>
+<body>
+<!--site-nav active="search" root="../"--><nav class="site-nav" aria-label="全站"><div class="sn-in">
+  <a class="sn-home" href="../"><span class="sn-f">才元刘氏先世著作</span><span class="sn-s">才元刘氏</span></a>
+  <div class="sn-links"><a href="../zhuzuo/">著作</a><a href="../renwu/">人物</a><a href="../huaxu/">花絮</a><a href="../search/" aria-current="true">搜索</a><a href="../#zhengli">关于</a></div>
+</div></nav><!--/site-nav-->
+<main class="wrap">
+  <h1>搜索</h1>
+  <form id="f" role="search"><input type="search" id="q" name="q" placeholder="人名、地名、诗句…（简体繁体都可以）" autocomplete="off" aria-label="搜索内容"><button>搜索</button></form>
+  <p class="tip">试试：<a>刘公堤</a><a>凤翔</a><a>皋闻</a><a>捻</a><a>东阿</a></p>
+  <div id="out"></div>
+  <footer>搜索范围：各书的原文（含小注）和白话译文。原书异体字较多，搜不到时可以换个写法再试。</footer>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const P = /[\s，。、：；！？「」『』《》〈〉（）　·…—“”‘’,.;:!?()]/g;
+let IDX = null, cur = [], shown = 0, filt = "";
+async function load(){ if (!IDX){ $("#out").innerHTML = '<p class="empty">正在载入索引…</p>'; IDX = await (await fetch("index.json")).json(); } return IDX; }
+/* 在 t 里找去掉标点后的 q，返回原文中的 [起, 止] */
+function find(t, q){
+  if (!t) return null;
+  let map = [], st = "";
+  for (let i = 0; i < t.length; i++){ const c = t[i]; if (!c.match(P)){ map.push(i); st += c; } }
+  const k = st.indexOf(q); if (k < 0) return null;
+  return [map[k], map[k + q.length - 1] + 1];
+}
+function snip(t, r, n = 34){
+  const a = Math.max(0, r[0] - n), b = Math.min(t.length, r[1] + n);
+  return (a > 0 ? "…" : "") + esc(t.slice(a, r[0])) + "<mark>" + esc(t.slice(r[0], r[1])) + "</mark>" + esc(t.slice(r[1], b)) + (b < t.length ? "…" : "");
+}
+async function run(q0){
+  const q = (q0 || "").replace(P, ""); history.replaceState(null, "", q ? "?q=" + encodeURIComponent(q0) : location.pathname);
+  if (!q){ $("#out").innerHTML = ""; return; }
+  const D = await load();
+  if (!D.M){ D.M = D.m; for (const r of D.r) r.ts = [...r.t].map(c => D.M[c] || c).join(""); }
+  const qs = [...q].map(c => D.M[c] || c).join("");   /* 查询转简，和转简原文、白话比对 */
+  cur = [];
+  for (const r of D.r){
+    let hit = find(r.x, q) || find(r.s, qs);           /* 转简文本与原文逐字对应，位置可直接用 */
+    let by = r.y ? find(r.y, qs) : null;
+    if (!hit && !by && !find(r.t, q) && !find(r.ts, qs)) continue;
+    cur.push({ r, hit, by });
+  }
+  filt = ""; render();
+}
+function render(){
+  const D = IDX, cnt = {};
+  cur.forEach(c => cnt[c.r.b] = (cnt[c.r.b] || 0) + 1);
+  const list = filt ? cur.filter(c => c.r.b === filt) : cur;
+  let h = `<p class="stat">共找到 ${cur.length} 处${cur.length ? "" : "。原书异体字较多，可以换个写法，或只输入其中两三个字再试"}</p>`;
+  if (cur.length){
+    h += `<div class="filt"><button data-b="" aria-pressed="${!filt}">全部 ${cur.length}</button>` +
+      Object.keys(D.books).filter(b => cnt[b]).map(b => `<button data-b="${b}" aria-pressed="${filt === b}">${esc(D.books[b])} ${cnt[b]}</button>`).join("") + "</div>";
+  }
+  h += '<ul class="res" id="res"></ul>';
+  $("#out").innerHTML = h; shown = 0; more(list);
+  $("#out").querySelectorAll(".filt button").forEach(b => b.onclick = () => { filt = b.dataset.b; render(); });
+}
+function more(list){
+  const ul = $("#res"), next = list.slice(shown, shown + 50); shown += next.length;
+  ul.insertAdjacentHTML("beforeend", next.map(({ r, hit, by }) =>
+    `<li><a href="../${r.b}/#${r.i}"><div class="bk">${esc(IDX.books[r.b])}</div><div class="tt">${esc(r.t)}</div>` +
+    (hit ? `<div class="sn">${snip(r.x, hit)}</div>` : "") + (by ? `<div class="sn by">白话：${snip(r.y, by)}</div>` : "") + "</a></li>").join(""));
+  $("#out .more")?.remove();
+  if (shown < list.length){ const b = document.createElement("button"); b.className = "more"; b.textContent = `再显示 ${Math.min(50, list.length - shown)} 条（还有 ${list.length - shown} 条）`; b.onclick = () => more(list); $("#out").appendChild(b); }
+}
+$("#f").onsubmit = e => { e.preventDefault(); run($("#q").value.trim()); };
+document.querySelectorAll(".tip a").forEach(a => a.onclick = () => { $("#q").value = a.textContent; run(a.textContent); });
+const q0 = new URLSearchParams(location.search).get("q"); if (q0){ $("#q").value = q0; run(q0); } else $("#q").focus();
+</script>
+</body>
+</html>

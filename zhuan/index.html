@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6eddb">
+<title>高城劉蔭渠先生傳 · 才元刘氏先世著作</title>
+<meta name="description" content="刘曾璈撰《高城刘荫渠先生传》（1846年刻本）：原书影印、原文与白话逐句对照。">
+<style>
+:root{
+  --paper:#f6eddb; --paper2:#eee0c3; --card:#fbf5ea; --ink:#2b231c; --ink2:#5c4f42; --ink3:#6e5f52;
+  --line:#dccaa8; --red:#a3422a; --red2:#cb653e; --hl:rgba(203,101,62,.11); --hlb:rgba(163,66,42,.55);
+  --mark:rgba(203,101,62,.28); --dim:rgba(246,237,219,.62); --shadow:0 1px 2px rgba(60,40,20,.05),0 4px 16px rgba(60,40,20,.05);
+  --serif-tc:"Noto Serif CJK TC","Source Han Serif TC","Noto Serif TC","Songti TC","STSongti-TC-Regular","PMingLiU","MingLiU",serif;
+  --serif-sc:"Noto Serif CJK SC","Source Han Serif SC","Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  --f1:13px; --f2:16px; --f3:19px; --f4:22px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--hh,84px) + 56px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif-sc);font-size:var(--f2);line-height:1.8;line-break:strict;-webkit-tap-highlight-color:rgba(203,101,62,.15)}
+button,select,label,.pair,.strip,.hot{touch-action:manipulation}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--red2);outline-offset:2px;border-radius:4px}
+button{font:inherit;color:inherit}
+a{color:var(--red)}
+[hidden]{display:none!important}
+
+/* 顶栏 */
+.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1280px;margin:0 auto;padding:10px 16px 9px;display:flex;align-items:center;gap:16px}
+.brand{flex:1;min-width:0}
+.brand h1{font-family:var(--serif-tc);font-weight:600;font-size:var(--f3);letter-spacing:.14em;margin:0;line-height:1.4}
+.brand .meta{font-family:var(--serif-sc);font-size:var(--f1);color:var(--ink3);letter-spacing:.04em;line-height:1.6}
+.brand .meta span{white-space:nowrap}
+.brand .meta span{margin-right:1.6em}
+.brand .meta span:last-child{margin-right:0}
+.seg{display:inline-flex;background:var(--paper2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;flex:none}
+.seg button{border:0;background:none;padding:4px 14px;border-radius:999px;cursor:pointer;font-family:var(--sans);font-size:var(--f1);color:var(--ink2);line-height:1.5}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.seg.sm button{padding:2px 10px}
+
+/* 读本 */
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+.hero{display:grid;grid-template-columns:200px minmax(0,1fr);gap:56px;padding:48px 0 40px;align-items:start}
+.hero figure{margin:0;grid-column:1;grid-row:1}
+.hero .intro{grid-column:2;grid-row:1;max-width:40em}
+.hero figure img{width:100%;display:block;border-radius:2px;cursor:zoom-in;border:1px solid var(--line)}
+.hero figcaption{font-size:var(--f1);color:var(--ink3);margin-top:10px;line-height:1.7}
+.intro p{margin:0 0 14px;color:var(--ink2);text-align:justify}
+.intro b{color:var(--ink);font-weight:600}
+.how{font-size:var(--f1);color:var(--ink3);border-left:2px solid var(--red2);padding:2px 0 2px 14px;margin-top:22px;line-height:1.9}
+.how b{color:var(--ink2);font-weight:600}
+.life{padding:8px 0 44px}
+.life h3{font-family:var(--serif-tc);font-weight:600;font-size:var(--f1);letter-spacing:.5em;color:var(--ink3);margin:0 0 22px;display:flex;align-items:center;gap:14px}
+.life h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.tlx{overflow-x:auto;scrollbar-width:thin}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(12,minmax(90px,1fr));position:relative;min-width:1080px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:61px;height:1px;background:var(--ink3);opacity:.5}
+.tl li{text-align:center;padding:0 4px;position:relative}
+.tl .era{font-family:var(--serif-tc);font-size:var(--f1);color:var(--ink3);letter-spacing:.05em;height:18px;white-space:nowrap}
+.tl .yr{font-family:var(--serif-tc);font-size:var(--f3);color:var(--ink);font-variant-numeric:oldstyle-nums;letter-spacing:.04em;height:30px}
+.tl .dot{display:block;width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--red);margin:8px auto 10px;position:relative;z-index:1}
+.tl li.k .dot{background:var(--red)}
+.tl li.after .dot{border-style:dashed;border-color:var(--ink3)}
+.tl .age{display:none}
+.tl .gz{font-family:var(--serif-tc);font-size:var(--f1);color:var(--red);letter-spacing:.08em}
+.tl .ev{font-family:var(--serif-tc);font-size:var(--f2);color:var(--ink2);line-height:1.6;margin-top:4px;letter-spacing:0;text-wrap:balance}
+.tools{position:sticky;top:var(--hh,84px);z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:8px 0;margin-bottom:8px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-bottom:1px solid var(--line)}
+.tools label{font-family:var(--sans);font-size:var(--f1);color:var(--ink2);display:inline-flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.tools .sp{flex:1}
+.toc{font-family:var(--sans);font-size:var(--f1)}
+.toc select{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:3px 6px}
+
+.para{display:grid;grid-template-columns:auto minmax(0,1fr);gap:36px;padding:34px 0 30px;border-bottom:1px solid var(--line)}
+.para h2{grid-column:1/-1;margin:0;display:flex;align-items:baseline;gap:14px;font-weight:600;font-size:var(--f4);letter-spacing:.06em}
+.para h2 .n{font-family:var(--serif-tc);color:var(--red)}
+.para h2 .where{display:none;margin-left:auto;font-family:var(--sans);font-weight:400;font-size:var(--f1);color:var(--ink3);letter-spacing:0}
+.pairs{min-width:0;grid-column:2;grid-row:2}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:26px;padding:10px 14px;margin:0 -14px;border-radius:10px;cursor:pointer;transition:background .15s}
+.pair:hover{background:var(--hl)}
+.pair.on{background:var(--hl);box-shadow:inset 3px 0 0 var(--red)}
+.pair.flash{animation:flash 1.6s ease}
+@keyframes flash{0%,40%{background:var(--mark)}100%{background:transparent}}
+.w{font-family:var(--serif-tc);font-size:var(--f3);line-height:1.95;letter-spacing:.05em;color:var(--ink)}
+.b{font-size:var(--f2);line-height:1.9;color:var(--ink2)}
+body.v-w .b,body.v-b .w{display:none}
+body.v-w .pair,body.v-b .pair{grid-template-columns:1fr}
+body.nop .pu{display:none}
+body.nop .w{letter-spacing:.12em}
+.gob{display:none;grid-column:1/-1;justify-self:end;border:0;background:none;color:var(--red);font-family:var(--sans);font-size:var(--f1);cursor:pointer;padding:0;margin-top:-4px}
+.pair.on .gob{display:block}
+.term{border-bottom:1.5px dotted var(--red2);cursor:help}
+body.nogl .term{border-bottom:0;cursor:inherit}
+.stripbox{grid-column:1;grid-row:2;position:sticky;top:calc(var(--hh,84px) + 64px);align-self:start;max-width:min(36vw,440px)}
+.strip{position:relative;overflow-x:auto;overflow-y:hidden;border-radius:2px;background:var(--paper2);border:1px solid var(--line);cursor:pointer;scrollbar-width:thin}
+.strip canvas{display:block}
+.strip .hl{position:absolute;background:var(--mark);outline:1.5px solid var(--hlb);border-radius:2px;pointer-events:none;transition:all .18s}
+.strip .layer{position:absolute;left:0;top:0}
+.stripcap{font-family:var(--sans);font-size:var(--f1);color:var(--ink3);margin-top:6px;text-align:left}
+
+footer{font-size:var(--f1);color:var(--ink3);padding:36px 0 60px;line-height:1.8}
+footer h3{color:var(--ink2);font-size:var(--f2);margin:0 0 8px}
+
+/* 原书 */
+#book{max-width:1400px;margin:0 auto;padding:14px 16px 0;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px}
+.stage{min-width:0;display:flex;flex-direction:column;align-items:center}
+.vp{position:relative;overflow:hidden;border-radius:4px;box-shadow:var(--shadow);background:#d8cbb2;touch-action:pan-y pinch-zoom}
+.vp .sw{position:absolute;left:0;top:0;height:100%;transition:transform .35s ease}
+.vp img{display:block;width:100%;height:100%;user-select:none;-webkit-user-drag:none}
+.vp .ov{position:absolute;inset:0}
+.hot{position:absolute;cursor:pointer;border-radius:2px}
+.hot:hover{background:rgba(168,56,42,.07);outline:1px solid rgba(168,56,42,.25)}
+.ov .hl{position:absolute;background:rgba(196,82,63,.22);outline:1.5px solid rgba(168,56,42,.7);border-radius:2px;pointer-events:none}
+.nav{display:flex;align-items:center;gap:10px;margin:12px 0 4px;font-family:var(--sans);font-size:var(--f1);width:100%;justify-content:center}
+.nav button{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:6px 16px;cursor:pointer}
+.nav button:disabled{opacity:.35;cursor:default}
+.nav .lab{min-width:120px;text-align:center;color:var(--ink2)}
+.hint{font-family:var(--sans);font-size:var(--f1);color:var(--ink3);text-align:center;margin-bottom:10px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;align-self:start;position:sticky;top:calc(var(--hh,84px) + 14px);box-shadow:var(--shadow)}
+.panel .k{font-family:var(--sans);font-size:var(--f1);color:var(--ink3);margin-bottom:8px;display:flex;gap:8px;align-items:center}
+.panel .b{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line)}
+.panel .acts{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;font-family:var(--sans);font-size:var(--f1)}
+.panel .acts button{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:4px 12px;cursor:pointer}
+.panel .acts .go{margin-left:auto;border-color:transparent;background:none;color:var(--red);padding:4px 0}
+.panel .empty{font-size:var(--f2);color:var(--ink2);line-height:1.8}
+.panel .x{display:none}
+.cont{font-family:var(--sans);font-size:var(--f1);color:var(--red);margin-left:6px}
+
+/* 注释浮层 */
+#pop{position:fixed;z-index:60;max-width:320px;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow);padding:12px 14px;font-size:var(--f2);line-height:1.75}
+#pop b{font-family:var(--serif-tc);font-size:var(--f3);color:var(--red);display:block;margin-bottom:2px}
+#zoom{position:fixed;inset:0;z-index:70;background:rgba(20,16,12,.86);display:grid;place-items:center;cursor:zoom-out;padding:16px}
+#zoom img{max-width:100%;max-height:100%;border-radius:4px}
+
+@media (max-width:860px){
+  :root{--f3:18px; --f4:20px}
+  .top-in{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;row-gap:0;padding:8px 14px 8px}
+  .brand{display:contents}
+  .brand h1{grid-column:1;grid-row:1;align-self:center}
+  .top .seg{grid-column:2;grid-row:1;align-self:center}
+  .top .seg button{padding:2px 12px}
+  .brand .meta{grid-column:1/-1}
+  .brand h1{font-size:var(--f3);letter-spacing:.1em}
+  .brand .meta{font-size:12px;letter-spacing:0}
+  .brand .meta span{margin-right:1em}
+  .hero{grid-template-columns:1fr;gap:22px;padding:30px 0 26px}
+  .hero figure{grid-column:1;grid-row:1;text-align:center}
+  .hero figure img{width:min(64%,260px);margin:0 auto}
+  .hero figcaption{margin-top:10px}
+  .hero .intro{grid-column:1;grid-row:2}
+  .tlx{overflow:visible}
+  .tl{display:block;min-width:0;padding:0 0 0 2px}
+  .tl::before{left:66px;right:auto;top:10px;bottom:40px;width:1px;height:auto;opacity:.45}
+  .tl li{display:grid;grid-template-columns:52px 28px 1fr;text-align:left;padding:0 0 20px;align-items:start}
+  .tl li:last-child{padding-bottom:0}
+  .tl .yr{grid-column:1;grid-row:1/3;height:auto;font-size:var(--f2);text-align:right;line-height:24px;color:var(--ink3)}
+  .tl li.k .yr{color:var(--ink);font-weight:600}
+  .tl .dot{grid-column:2;grid-row:1;margin:7px auto 0;width:10px;height:10px}
+  .tl .ev{grid-column:3;grid-row:1;margin:0;font-size:var(--f2);line-height:24px;color:var(--ink)}
+  .tl li.k .ev{font-weight:600}
+  .tl .era{grid-column:3;grid-row:2;height:auto;font-size:var(--f1);margin-top:3px;white-space:normal;letter-spacing:.06em}
+  .tl .age{display:inline;color:var(--red)}
+  .tl .gz{display:none}
+  .tl li.after .ev,.tl li.after .yr{color:var(--ink3);font-weight:400}
+  .para{grid-template-columns:minmax(0,1fr);gap:16px;padding:26px 0 22px}
+  .stripbox{min-width:0}
+  .para h2 .where{display:none}
+  .stripbox{position:static;max-width:none;width:100%;grid-column:1;grid-row:2}
+  .pairs{grid-column:1;grid-row:3}
+  .strip{margin:0 auto}
+  .stripcap{text-align:center}
+  .pair{grid-template-columns:1fr;gap:4px;padding:10px 12px;margin:0 -12px}
+  .tools{position:static;gap:8px;padding:10px 0}
+  .toc{display:block;flex-basis:100%}
+  .toc select{width:100%}
+  #book{grid-template-columns:1fr;padding:10px 12px 0;gap:0}
+  .panel{position:fixed;left:0;right:0;bottom:0;top:auto;border-radius:16px 16px 0 0;max-height:40vh;overflow:auto;z-index:40;padding:14px 16px calc(14px + env(safe-area-inset-bottom));border-bottom:0}
+  .panel.min .w,.panel.min .b,.panel.min .acts,.panel.min .empty{display:none}
+  .panel .x{display:block;position:absolute;right:10px;top:8px;border:0;background:none;font-size:20px;color:var(--ink3);cursor:pointer;padding:2px 8px}
+  .bookpad{height:52vh}
+  #pop{left:12px!important;right:12px;bottom:12px;top:auto!important;max-width:none}
+}
+/* 触屏：按钮外观不变，点按区域扩大到约 44px */
+@media (pointer:coarse){
+  .seg button,.gob,.nav button,.panel .acts button,.panel .x{position:relative}
+  .seg button::after,.panel .acts button::after{content:"";position:absolute;inset:-8px 0}
+  .gob{padding:8px 0;margin-top:-8px}
+  .nav button{min-height:44px;padding:6px 18px}
+  .panel .x::after{content:"";position:absolute;inset:-10px}
+  .tools label{min-height:44px}
+  .tools input{width:18px;height:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+.fbsec{margin:14px 0 0;font-family:var(--sans);font-size:var(--f1)}.fbsec a{color:var(--ink3);text-decoration:none}.fbsec a:hover{color:var(--red)}
+.pact{display:none;grid-column:1/-1;justify-content:flex-end;gap:18px;margin-top:-4px;font-family:var(--sans);font-size:var(--f1)}.pair.on .pact{display:flex}.pact .gob{display:inline;margin:0}.fb{color:var(--ink3);text-decoration:none}.fb:hover{color:var(--red)}.fbline a{color:var(--red)}
+.brand .meta a{color:inherit;text-decoration:none;border-bottom:1px dotted currentColor}.brand .meta a:hover{color:var(--red)}
+
+.dl{font-family:var(--sans);font-size:var(--f1);margin:4px 0 0}.dl a{color:var(--red);text-decoration:none;border-bottom:1px solid currentColor}.dl span{color:var(--ink3)}
+
+/* 大字模式（全站共用，记在本机） */
+:root.big{--f1:15px;--f2:19px;--f3:21px;--f4:25px}
+:root.big .top{--f1:13px;--f3:18px}
+.bigbtn{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:4px 12px;cursor:pointer;font-family:var(--sans);font-size:var(--f1);color:var(--ink2);line-height:1.5}
+.bigbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* 手机：往下读时顶栏只留一行 */
+@media (max-width:900px){.top.compact .brand .meta{display:none}}
+.top{background:color-mix(in srgb,var(--paper) 96%,transparent)!important}
+
+/* 继续上次阅读 */
+#resume{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:55;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 24px);background:var(--card);border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow);padding:6px 8px 6px 16px;font-family:var(--sans);font-size:13px;color:var(--ink2)}
+#resume a{color:var(--red);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:56vw}
+#resume button{border:0;background:none;color:var(--ink3);font-size:18px;line-height:1;cursor:pointer;padding:4px 8px}
+.sec[id],.piece[id],.e[id],.essay[id],.juan[id],.gong[id],.para[id]{scroll-margin-top:calc(var(--hh,84px) + 14px)}
+</style>
+<style id="site-nav-css">
+.site-nav{background:#f6eddb;border-bottom:1px solid #dccaa8;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.5}
+.site-nav .sn-in{max-width:var(--sn-w,1280px);margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-nav a{text-decoration:none}
+.site-nav .sn-home{font-family:"Noto Serif CJK TC","Source Han Serif TC","Noto Serif TC","Songti TC","STSongti-TC-Regular","PMingLiU",serif;font-size:15px;font-weight:600;letter-spacing:.1em;color:#2b231c;white-space:nowrap;padding:9px 0;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.site-nav .sn-home:hover{color:#a3422a}
+.site-nav .sn-links{display:flex;gap:22px;flex:none}
+.site-nav .sn-links a{font-size:14px;color:#5c4f42;letter-spacing:.06em;padding:9px 0 7px;border-bottom:2px solid transparent;white-space:nowrap}
+.site-nav .sn-links a:hover{color:#a3422a}
+.site-nav .sn-links a[aria-current]{color:#a3422a;border-bottom-color:rgba(163,66,42,.4)}
+.site-nav .sn-s{display:none}
+@media (max-width:420px){
+  .site-nav .sn-in{padding:0 14px;gap:8px}
+  .site-nav .sn-links{gap:14px}
+  .site-nav .sn-home{font-size:14px;letter-spacing:.06em}
+  .site-nav .sn-links a{font-size:13.5px;letter-spacing:.02em}
+}
+@media (max-width:374px){.site-nav .sn-f{display:none}.site-nav .sn-s{display:inline}}
+@media print{.site-nav{display:none}}
+</style>
+</head>
+<body class="v-wb">
+<!--site-nav active="zhuzuo" root="../"--><nav class="site-nav" aria-label="全站"><div class="sn-in">
+  <a class="sn-home" href="../"><span class="sn-f">才元刘氏先世著作</span><span class="sn-s">才元刘氏</span></a>
+  <div class="sn-links"><a href="../zhuzuo/" aria-current="true">著作</a><a href="../renwu/">人物</a><a href="../huaxu/">花絮</a><a href="../search/">搜索</a><a href="../#zhengli">关于</a></div>
+</div></nav><!--/site-nav-->
+<header class="top"><div class="top-in">
+  <div class="brand">
+    <h1>高城劉蔭渠先生傳</h1>
+    <div class="meta"><span><a href="../renwu/zengao/">刘曾璈公</a> 撰</span><span>道光二十六年（1846）刻本一卷</span><span>国家图书馆藏</span></div>
+    <div class="meta"><span><a href="../#zhengli">才元刘氏廿二世天霖</a></span><span>二〇二六年整理制作成网页</span></div>
+  </div>
+  <div class="seg" role="group" aria-label="阅读方式">
+    <button data-mode="read" aria-pressed="true">读本</button>
+    <button data-mode="book" aria-pressed="false">原书</button>
+  </div>
+</div></header>
+
+<main id="read">
+  <div class="wrap">
+    <section class="hero">
+      <div class="intro">
+        <p>传主<b>刘曾璇公</b>（1770—1844），字毓源，号荫渠，盐山才元刘氏十五世。「高城」是盐山的古称。他是乾隆壬子科举人，在枣强、元氏、宣化、定州做了二十多年学官。后来被选为甘肃秦安知县，他随即辞官，回乡著书、教孙子读书，著有《春秋书法比义》十二卷等。</p>
+        <p>这篇传是他的三弟<b>曾璈公</b>在他去世一年半后写的，当时曾璈公七十五岁。两人从小一起读书、一起赶考、一起做学官，曾璈公说：「知兄者莫如余」。全文约一千六百字，写的是一个读书人的一生：少年得名，屡试不第，以教书为业，晚年儿孙满堂。</p>
+        <p class="dl"><a href="https://tianlinliu.com/yanshan-liu/pdf/%E9%AB%98%E5%9F%8E%E5%8A%89%E8%94%AD%E6%B8%A0%E5%85%88%E7%94%9F%E5%82%B3.pdf" download="高城劉蔭渠先生傳.pdf">下载原书 PDF</a> <span>（5 MB，国家图书馆藏本扫描）</span></p>
+        <div class="how"><b>读本</b>　原文和白话逐句对照，旁边是原书对应的几列；点一句话，原书上就会标出它的位置。<br><b>原书</b>　逐页翻看原刻本；点原书上任意一列，就能看到那一句的录文和白话。<br><b>注释</b>　原文里带<span class="term">虚线</span>的词，点一下可以看解释。</div>
+      </div>
+      <figure>
+        <img id="slipImg" alt="题签页：高城劉蔭渠先生傳，平陵毛鴻賓題籤">
+        <figcaption>题签「高城劉蔭渠先生傳　平陵毛鴻賓題籤」。旁有后人手书「鹽山劉蔭渠廣文先生詩」。</figcaption>
+      </figure>
+    </section>
+
+    <section class="life">
+      <h3>生平</h3>
+      <div class="tlx"><ol class="tl" id="tl"></ol></div>
+    </section>
+
+    <div class="tools">
+      <div class="seg sm" role="group" aria-label="显示内容">
+        <button data-v="wb" aria-pressed="true">对照</button>
+        <button data-v="w" aria-pressed="false">原文</button>
+        <button data-v="b" aria-pressed="false">白话</button>
+      </div>
+      <div class="seg sm" role="group" aria-label="原文字体">
+        <button data-z="t" aria-pressed="true">繁</button>
+        <button data-z="s" aria-pressed="false">简</button>
+      </div>
+      <button class="bigbtn" id="bigbtn" aria-pressed="false" title="放大字号">大字</button>
+      <label><input type="checkbox" id="optP" checked> 标点</label>
+      <label><input type="checkbox" id="optG" checked> 注释</label>
+      <span class="sp"></span>
+      <span class="toc"><select id="toc" aria-label="跳到段落"></select></span>
+    </div>
+
+    <div id="paras"></div>
+
+    <footer>
+      原书：〔清〕刘曾璈公《高城劉蔭渠先生傳》一卷，道光二十六年（1846）刻本，国家图书馆藏（天津图书馆 P1963）。影印本见 <a href="https://commons.wikimedia.org/wiki/File:NLC892-GBZX0301014738-290968_%E9%AB%98%E5%9F%8E%E5%8A%89%E8%94%AD%E6%B8%A0%E5%85%88%E7%94%9F%E5%82%B3_%E4%B8%80%E5%8D%B7.pdf" target="_blank" rel="noopener">Wikimedia Commons</a>，属公有领域。<br>
+      录文：按原书逐列核对。原书没有分段，本页的十个小标题是后加的。标点、分段、白话和注释由 Claude 协助完成，可能有误，欢迎指正。<br>
+      相关：同年庆元公、庆凯公所撰《<a href="../xingshu/">鹽山劉蔭渠公行述</a>》。<br>
+      发现错误，或想补充先人事迹？请<a id="fbAll" target="_blank" rel="noopener">点这里留言</a>；每段末尾也有「纠错」入口。
+    </footer>
+  </div>
+</main>
+
+<main id="book" hidden>
+  <div class="stage">
+    <div class="vp" id="vp"><div class="sw" id="sw"><img id="pg" alt=""><div class="ov" id="ov"></div></div></div>
+    <div class="nav">
+      <button id="prev" aria-label="上一页">‹ 上一页</button>
+      <span class="lab" id="lab"></span>
+      <button id="next" aria-label="下一页">下一页 ›</button>
+    </div>
+    <div class="hint">左右滑动，或用键盘 ← → 也可以翻页。</div>
+    <div class="bookpad"></div>
+  </div>
+  <aside class="panel" id="panel"></aside>
+</main>
+
+<div id="pop" hidden></div>
+<div id="zoom" hidden><img alt=""></div>
+
+<script>
+const D = {"title":["伯兄蔭渠公傳","大哥荫渠公传"],"glossS":{"仲兄學磎":"仲兄学磎","輓詩":"挽诗","易簀":"易箦","濟寧州署":"济宁州署","姪輩":"姪辈","庭訓":"庭训","就傅":"就傅","入學":"入学","食餼":"食饩","鄉舉":"乡举","芸窗":"芸窗","棘闈":"棘闱","薄宦":"薄宦","截取":"截取","解組":"解组","書廚":"书厨","天祿照讀":"天禄照读","先君子":"先君子","瀆問":"渎问","童子試":"童子试","郡守孫公":"郡守孙公","院試":"院试","學使":"学使","不售":"不售","摭拾":"摭拾","餖飣":"饾饤","類書":"类书","古學":"古学","沈公":"沈公","博士弟子員":"博士弟子员","廩餼":"廪饩","冠軍":"冠军","津門":"津门","漏下四鼓":"漏下四鼓","鄉薦":"乡荐","座主":"座主","劉文清公":"刘文清公","下帷":"下帷","連牀風雨":"连床风雨","帖括":"帖括","實學":"实学","聘享":"聘享","禹貢":"禹贡","易鑑":"易鉴","書法":"书法","屬辭比事":"属辞比事","菑畬":"菑畬","機杼":"机杼","鶴和堂":"鹤和堂","禮部":"礼部","額滿被遺":"额满被遗","房考":"房考","主司":"主司","挑二等":"挑二等","甲第":"甲第","雁行":"雁行","烏養":"乌养","部文":"部文","秦安":"秦安","林下":"林下","京職":"京职","剞劂":"剞劂","耄而好學":"耄而好学","芻豢":"刍豢","付梓":"付梓","督學":"督学","典試":"典试","風教":"风教","詞垣":"词垣","侍從":"侍从","立言":"立言","分守":"分守","兗州":"兖州","東省":"东省","攝博平篆":"摄博平篆","伯宰東昌":"伯宰东昌","仲丞東郡":"仲丞东郡","封翁":"封翁","耄期":"耄期","捐館舍":"捐馆舍","臚陳":"胪陈","顛末":"颠末","姪輩述":"姪辈述","同懷弟":"同怀弟","長夏":"长夏"},"sents":[{"p":0,"w":"余兄弟九人，兄為長，次仲兄學磎，次為余，吾三人者年相若，自少壯至老，始終友愛無間也。","b":"我们兄弟九人，哥哥是老大，其次是二哥学溪（曾璞），再其次是我。我们三人年纪相近，从少年到老年，始终友爱，没有一点隔阂。","g":[[0,1,0,21],[0,2,0,13]],"ws":"余兄弟九人，兄为长，次仲兄学磎，次为余，吾三人者年相若，自少壮至老，始终友爱无间也。","sp":[[11,15,"仲兄學磎"]]},{"p":0,"w":"戊戌夏，仲兄逝世，臨終囑余作輓詩。詩成，兄閱畢，少頃，惻然曰：「俟吾歿後，弟當為吾作傳。」","b":"戊戌年（1838）夏天，二哥去世，临终嘱咐我写挽诗。诗写成后，哥哥读完，过了一会儿，伤感地说：「等我死后，你该为我写一篇传。」","g":[[0,2,14,21],[0,3,0,21],[0,4,0,4]],"ws":"戊戌夏，仲兄逝世，临终嘱余作挽诗。诗成，兄阅毕，少顷，恻然曰：「俟吾殁后，弟当为吾作传。」","sp":[[14,16,"輓詩"]]},{"p":0,"w":"時心訝之，不敢應，亦不敢辭也。","b":"我当时心里很吃惊，不敢答应，也不敢推辞。","g":[[0,4,5,16]],"ws":"时心讶之，不敢应，亦不敢辞也。","sp":[]},{"p":0,"w":"甲辰冬，兄卒於濟寧州署，易簀時又囑姪輩為言。","b":"甲辰年（1844）冬天，哥哥在济宁州的官署里去世，临终时又让侄子们把这句话转告给我。","g":[[0,4,17,21],[0,5,0,14]],"ws":"甲辰冬，兄卒于济宁州署，易箦时又嘱姪辈为言。","sp":[[7,11,"濟寧州署"],[12,14,"易簀"],[17,19,"姪輩"]]},{"p":0,"w":"余聞之，泫然曰：嗚呼！吾何忍傳吾兄哉！","b":"我听了，流着泪说：唉！我怎么忍心为自己的哥哥写传啊！","g":[[0,5,15,21],[0,6,0,8]],"ws":"余闻之，泫然曰：呜呼！吾何忍传吾兄哉！","sp":[]},{"p":0,"w":"顧念七十年來，與兄少同學，長同業，自稟承庭訓，就傅親師，凡入學、食餼、鄉舉，接踵相繼；","b":"可是回想七十年来，我和哥哥小时候一起读书，长大后做同样的事：从接受父亲教诲、跟随老师求学，到考中秀才、成为廪生、乡试中举，都是一前一后、紧跟着来的；","g":[[0,6,9,21],[0,7,0,21],[0,8,0,0]],"ws":"顾念七十年来，与兄少同学，长同业，自禀承庭训，就傅亲师，凡入学、食饩、乡举，接踵相继；","sp":[[20,22,"庭訓"],[23,25,"就傅"],[29,31,"入學"],[32,34,"食餼"],[35,37,"鄉舉"]]},{"p":0,"w":"居則共勵芸窗，出則偕赴棘闈，晦明寒暑，甘苦同之，如是者幾三十年。","b":"在家就在书房里互相勉励，出门就一同进考场，白天黑夜、寒来暑往，同甘共苦，这样过了将近三十年。","g":[[0,8,1,21],[0,9,0,5]],"ws":"居则共励芸窗，出则偕赴棘闱，晦明寒暑，甘苦同之，如是者几三十年。","sp":[[4,6,"芸窗"],[11,13,"棘闈"]]},{"p":0,"w":"中歲薄宦一方，相距僅百餘里，音問不絕。","b":"中年各自在外地做个小官，相距只有一百多里，书信从没断过。","g":[[0,9,6,21]],"ws":"中岁薄宦一方，相距仅百余里，音问不绝。","sp":[[2,4,"薄宦"]]},{"p":0,"w":"迨晚年，因截取各有所就，先後解組歸田，聚首者又五六年。","b":"到了晚年，因为「截取」各自得到新的任命，又先后辞官回乡，又相聚了五六年。","g":[[0,10,0,21],[0,11,0,0]],"ws":"迨晚年，因截取各有所就，先后解组归田，聚首者又五六年。","sp":[[5,7,"截取"],[14,16,"解組"]]},{"p":0,"w":"相處最久，相習最深，故知兄者莫如余。嗚呼！吾又何忍不傳吾兄哉！","b":"我们相处最久，彼此最熟悉，所以最懂哥哥的人，没有谁比得上我。唉！我又怎么忍心不为哥哥写传呢！","g":[[0,11,1,21],[0,12,0,6]],"ws":"相处最久，相习最深，故知兄者莫如余。呜呼！吾又何忍不传吾兄哉！","sp":[]},{"p":1,"w":"兄長余二歲，幼而穎悟，天性好學。","b":"哥哥比我大两岁，从小聪明，天性好学。","g":[[0,12,8,20]],"ws":"兄长余二岁，幼而颖悟，天性好学。","sp":[]},{"p":1,"w":"五六歲解作對偶，八歲能吟詩，十歲博習經傳，强記不忘，當時親友咸以書廚稱之。","b":"五六岁就会对对子，八岁能作诗，十岁广泛学习经书和传注，记性极好、过目不忘，当时亲友都叫他「书橱」。","g":[[0,12,21,21],[0,13,0,21],[0,14,0,8]],"ws":"五六岁解作对偶，八岁能吟诗，十岁博习经传，强记不忘，当时亲友咸以书厨称之。","sp":[[32,34,"書廚"]]},{"p":1,"w":"嘗夢讀書一室，有老人燃燈以照，自謂古燈夢，蓋與天祿照讀故事若合符然，異日通經之兆已見於此。","b":"他曾梦见自己在一间屋里读书，有位老人点灯给他照亮，他自称这是「古灯梦」。这和汉代刘向在天禄阁夜读、有老人燃杖为他照明的故事正好吻合——日后精通经学的征兆，那时就已经出现了。","g":[[0,14,9,21],[0,15,0,21],[0,16,0,4]],"ws":"尝梦读书一室，有老人燃灯以照，自谓古灯梦，盖与天禄照读故事若合符然，异日通经之兆已见于此。","sp":[[23,27,"天祿照讀"]]},{"p":1,"w":"由是才思日益進。","b":"从此他的文思一天天长进。","g":[[0,16,5,11]],"ws":"由是才思日益进。","sp":[]},{"p":1,"w":"憶余七八歲時，同從先君子學，先君子性嚴厲，每有所講授，未解者不敢瀆問，常進質於兄，輙一一解說之。","b":"记得我七八岁时，和哥哥一起跟父亲读书。父亲性情严厉，每次讲课，我有听不懂的也不敢多问，常常去请教哥哥，哥哥总是一一给我讲明白。","g":[[0,16,12,21],[0,17,0,21],[1,0,0,11]],"ws":"忆余七八岁时，同从先君子学，先君子性严厉，每有所讲授，未解者不敢渎问，常进质于兄，輙一一解说之。","sp":[[9,12,"先君子"],[32,34,"瀆問"]]},{"p":2,"w":"十三歲應童子試，能默誦五經，一時有神童之目，受知於郡守孫公，交卷後，撤堂上官燭送歸寓。","b":"十三岁参加童子试，能背诵五经，一时被称为神童。知府孙公很赏识他，交卷之后，撤下大堂上的官烛，派人送他回住处。","g":[[1,0,12,21],[1,1,0,21],[1,2,0,4]],"ws":"十三岁应童子试，能默诵五经，一时有神童之目，受知于郡守孙公，交卷后，撤堂上官烛送归寓。","sp":[[4,7,"童子試"],[25,29,"郡守孫公"]]},{"p":2,"w":"比院試，亟稱於學使之前，學使疑之，竟不售。","b":"到了院试，孙公在学政面前极力夸他，学政反倒起了疑心，结果没有录取。","g":[[1,2,5,21]],"ws":"比院试，亟称于学使之前，学使疑之，竟不售。","sp":[[1,3,"院試"],[7,9,"學使"],[18,20,"不售"]]},{"p":2,"w":"十五六歲工詩賦。時余方學步，好摭拾典故詁題，兄戒之曰：「詩賦固須詞藻，總以用意為主，似此餖飣，則真意掩，反為累矣。」","b":"十五六岁时他擅长诗赋。那时我刚开始学，喜欢搬弄典故来解题，哥哥告诫我：「诗赋固然要有辞藻，但总要以立意为主。像你这样堆砌，真正的意思就被盖住了，反而成了累赘。」","g":[[1,3,0,21],[1,4,0,21],[1,5,0,3]],"ws":"十五六岁工诗赋。时余方学步，好摭拾典故诂题，兄戒之曰：「诗赋固须词藻，总以用意为主，似此饾饤，则真意掩，反为累矣。」","sp":[[15,17,"摭拾"],[44,46,"餖飣"]]},{"p":2,"w":"每拈一題，嘗束類書不使觀。嗣後有作漸近清白、不致以詞掩意者，受兄之益居多焉。","b":"每次出题，他常把类书捆起来不让我看。后来我写的东西渐渐清楚明白，不至于让辞藻盖过意思，多半是得益于哥哥。","g":[[1,5,4,21],[1,6,0,15]],"ws":"每拈一题，尝束类书不使观。嗣后有作渐近清白、不致以词掩意者，受兄之益居多焉。","sp":[[7,9,"類書"]]},{"p":2,"w":"十七歲以古學冠闔郡，受知於學使沈公，補博士弟子員；十八歲試第一，食廩餼。","b":"十七岁时他的古学考了全府第一，得到学政沈公（沈初）的赏识，成为县学生员（秀才）；十八岁考试又是第一，成为廪生，领官府发的钱粮。","g":[[1,6,16,21],[1,7,0,21],[1,8,0,2]],"ws":"十七岁以古学冠阖郡，受知于学使沈公，补博士弟子员；十八岁试第一，食廪饩。","sp":[[4,6,"古學"],[15,17,"沈公"],[19,24,"博士弟子員"],[33,35,"廩餼"]]},{"p":2,"w":"以後連次冠軍，名噪津門。","b":"此后屡次考第一，名声传遍天津一带。","g":[[1,8,3,12]],"ws":"以后连次冠军，名噪津门。","sp":[[4,6,"冠軍"],[9,11,"津門"]]},{"p":2,"w":"益自刻苦，黎明即起，至夜分漏下四鼓，披吟不倦。","b":"他更加刻苦，天一亮就起床，一直读到半夜四更，吟诵不倦。","g":[[1,8,13,21],[1,9,0,9]],"ws":"益自刻苦，黎明即起，至夜分漏下四鼓，披吟不倦。","sp":[[13,17,"漏下四鼓"]]},{"p":2,"w":"先君子憐而戒之，猶不輟，至繼之以怒，為之滅燭而後已。","b":"父亲心疼他，劝他歇歇，他还是不停；直到父亲发了火，替他把蜡烛吹灭，他才罢休。","g":[[1,9,11,21],[1,10,0,10]],"ws":"先君子怜而戒之，犹不辍，至继之以怒，为之灭烛而后已。","sp":[[0,3,"先君子"]]},{"p":3,"w":"二十三歲領壬子鄉薦，座主劉文清公甚器重之。","b":"二十三岁那年，他考中壬子科（1792）举人，主考官刘文清公（刘墉）很器重他。","g":[[1,10,11,21],[1,11,0,7]],"ws":"二十三岁领壬子乡荐，座主刘文清公甚器重之。","sp":[[7,9,"鄉薦"],[10,12,"座主"],[12,16,"劉文清公"]]},{"p":3,"w":"愈銳志進取，攻苦下帷。","b":"他更加立志上进，闭门苦读。","g":[[1,11,8,16]],"ws":"愈锐志进取，攻苦下帷。","sp":[[8,10,"下帷"]]},{"p":3,"w":"適甲寅余繼舉於鄉，連牀風雨，相與切磋，余有所作，必就正於兄，兄亦不恥下問。","b":"恰好甲寅年（1794）我也接着中了举，兄弟俩风雨夜里同床而卧，互相切磋：我写了文章一定请哥哥指正，哥哥也不耻下问。","g":[[1,11,17,21],[1,12,0,21],[1,13,0,4]],"ws":"适甲寅余继举于乡，连床风雨，相与切磋，余有所作，必就正于兄，兄亦不耻下问。","sp":[[9,13,"連牀風雨"]]},{"p":3,"w":"於帖括之學外，尤務實學：凡諸經研究義理，兼綜諸家之說而折其衷，不徒以記誦為功；","b":"在应付科举的文章之外，他尤其致力于真学问：研究各部经书的义理，综合各家说法再取其中正，不只是靠背诵；","g":[[1,13,5,21],[1,14,0,16]],"ws":"于帖括之学外，尤务实学：凡诸经研究义理，兼综诸家之说而折其衷，不徒以记诵为功；","sp":[[1,3,"帖括"],[9,11,"實學"]]},{"p":3,"w":"至於宮室、朝廟、祭祀、聘享、車服、禮器諸典制，以及樂書之音律、禹貢之水道，無不考核詳明。","b":"至于宫室、朝堂宗庙、祭祀、聘问宴享、车马服饰、礼器等各种典章制度，以及乐书里的音律、《禹贡》里的河道，没有不考证得详细清楚的。","g":[[1,14,17,21],[1,15,0,21],[1,16,0,7]],"ws":"至于宫室、朝庙、祭祀、聘享、车服、礼器诸典制，以及乐书之音律、禹贡之水道，无不考核详明。","sp":[[11,13,"聘享"],[31,33,"禹貢"]]},{"p":3,"w":"於易，則以史事參經義，互相印證，名為易鑑；","b":"对于《周易》，他用历史事件对照经义，互相印证，取名《易鉴》；","g":[[1,16,8,21],[1,17,0,2]],"ws":"于易，则以史事参经义，互相印证，名为易鉴；","sp":[[18,20,"易鑑"]]},{"p":3,"w":"於春秋，則玩索書法，屬辭比事，分合參互，發明經旨，尤一生精力所在，別有會心者。","b":"对于《春秋》，他反复琢磨孔子的「书法」（用字褒贬的规则），把相似的文辞和史事排比起来，或分或合、互相参照，阐发经文本意。这是他一生精力所在，也是他最有心得的地方。","g":[[1,17,3,21],[2,0,0,12]],"ws":"于春秋，则玩索书法，属辞比事，分合参互，发明经旨，尤一生精力所在，别有会心者。","sp":[[7,9,"書法"],[10,14,"屬辭比事"]]},{"p":3,"w":"為文章，華實相兼，質而不枯，文而不縟，不拘一格，相題為之，","b":"他写文章，文采和内容兼顾，朴实而不干枯，有文采而不繁缛，不拘一格，看题目来写；","g":[[2,0,13,21],[2,1,0,13]],"ws":"为文章，华实相兼，质而不枯，文而不缛，不拘一格，相题为之，","sp":[]},{"p":3,"w":"要皆菑畬經訓，鎔鑄成文，理精法密，根柢於古文大家而自出機杼，又不戾於時，尤為雅俗共賞。","b":"总之都是在经书上深耕细作，再融会贯通写成文章：道理精当、法度严密，以古文大家为根底而又有自己的创造，同时又不背离当时的风尚，所以雅俗共赏。","g":[[2,1,14,21],[2,2,0,21],[2,3,0,6]],"ws":"要皆菑畬经训，镕铸成文，理精法密，根柢于古文大家而自出机杼，又不戾于时，尤为雅俗共赏。","sp":[[2,4,"菑畬"],[27,29,"機杼"]]},{"p":3,"w":"至其教課諸弟姪，訓誨來學，口講指畫，循循善誘，俾皆心服。","b":"至于他教弟弟、侄子们读书，教导来求学的人，边讲边比划，循循善诱，让人人心服。","g":[[2,3,7,21],[2,4,0,7]],"ws":"至其教课诸弟姪，训诲来学，口讲指画，循循善诱，俾皆心服。","sp":[]},{"p":4,"w":"奈時命不偶，屢薦不售，作讀書鶴和堂舊宅賦以自遣，","b":"无奈时运不济，屡次被考官推荐，却始终没有考中，于是写了《读书鹤和堂旧宅赋》来排遣自己；","g":[[2,4,8,21],[2,5,0,6]],"ws":"奈时命不偶，屡荐不售，作读书鹤和堂旧宅赋以自遣，","sp":[[8,10,"不售"],[14,17,"鶴和堂"]]},{"p":4,"w":"箇中甘苦憤樂相尋之真趣，情見乎辭，而於承先啓後、有志未逮之思，俯仰感懷，一篇之中三致意焉。","b":"赋里苦乐交替、悲喜相随的真实滋味，都流露在字里行间；而对于继承祖先、开启后人却壮志未酬的心思，他俯仰感慨，一篇之中反复致意。","g":[[2,5,7,21],[2,6,0,21],[2,7,0,1]],"ws":"个中甘苦愤乐相寻之真趣，情见乎辞，而于承先启后、有志未逮之思，俯仰感怀，一篇之中三致意焉。","sp":[]},{"p":4,"w":"乙丑復與余同試禮部，俱以額滿被遺。","b":"乙丑年（1805）他又和我一起参加礼部会试，两人都因为名额已满而落选。","g":[[2,7,2,16]],"ws":"乙丑复与余同试礼部，俱以额满被遗。","sp":[[7,9,"禮部"],[12,16,"額滿被遺"]]},{"p":4,"w":"先君子慰之曰：「汝兄弟試卷，自屬盡一日之長，房考主司既皆嘉賞，卒無一遇，是吾命也，汝輩其少安毋躁。」","b":"父亲安慰我们说：「你们兄弟的考卷，那一天已经发挥出了最好水平；房考官、主考官都称赞，最后却没有考中，这是我的命啊。你们暂且安心，不要急躁。」","g":[[2,7,18,21],[2,8,0,21],[2,9,0,14]],"ws":"先君子慰之曰：「汝兄弟试卷，自属尽一日之长，房考主司既皆嘉赏，卒无一遇，是吾命也，汝辈其少安毋躁。」","sp":[[0,3,"先君子"],[22,24,"房考"],[24,26,"主司"]]},{"p":4,"w":"戊辰同挑二等，兄慨然曰：「吾輩常思博一甲第，藉以顯揚，今僅得此，殊非夙願。然整飭士習、振興文風，胥於是乎在，願與吾弟共勉之。」","b":"戊辰年（1808）兄弟俩一同参加「大挑」，都列二等（可以做学官）。哥哥感慨地说：「我们一直想考个进士，好光宗耀祖，如今只得到这个，实在不是本来的心愿。不过整顿读书人的风气、振兴一方文风，全在这个职位上，愿和弟弟共勉。」","g":[[2,9,15,20],[2,10,0,21],[2,11,0,21],[2,12,0,0]],"ws":"戊辰同挑二等，兄慨然曰：「吾辈常思博一甲第，借以显扬，今仅得此，殊非夙愿。然整饬士习、振兴文风，胥于是乎在，愿与吾弟共勉之。」","sp":[[3,6,"挑二等"],[19,21,"甲第"]]},{"p":5,"w":"壬申秋，先後赴任，相距不遠，郵筒頻寄，和詩中有「雁行頻隔三更夢，烏養空懸兩地心」之句。","b":"壬申年（1812）秋天，兄弟俩先后上任，相距不远，常常互寄书信。唱和的诗里有这样的句子：「雁行频隔三更梦，乌养空悬两地心。」（兄弟分隔两地，半夜常在梦里相见；想像乌鸦反哺一样奉养父母，却两地牵挂、无从尽孝。）","g":[[2,12,1,21],[2,13,0,13]],"ws":"壬申秋，先后赴任，相距不远，邮筒频寄，和诗中有「雁行频隔三更梦，乌养空悬两地心」之句。","sp":[[24,26,"雁行"],[32,34,"烏養"]]},{"p":5,"w":"歷任棗强、宣化、元氏、定州等處，教士以品行為先，文藝次之，士習以飭，文風以振，賴以成就者甚衆。","b":"他先后在枣强、宣化、元氏、定州等地做学官，教导士子以品行为先、文章其次，读书人的风气因此端正，文风因此振兴，靠他成才的人很多。","g":[[2,13,14,21],[2,14,0,21],[2,15,0,7]],"ws":"历任枣强、宣化、元氏、定州等处，教士以品行为先，文艺次之，士习以饬，文风以振，赖以成就者甚众。","sp":[]},{"p":5,"w":"癸巳，奉部文截選甘肅秦安令，授職後旋引退，優遊林下，著書課孫以娛暮年。","b":"癸巳年（1833），吏部发文，按「截取」选他做甘肃秦安县知县。他接受任命后随即辞官，在乡间悠闲度日，著书、教孙子读书，安度晚年。","g":[[2,15,8,21],[2,16,0,15]],"ws":"癸巳，奉部文截选甘肃秦安令，授职后旋引退，优游林下，著书课孙以娱暮年。","sp":[[4,6,"部文"],[10,12,"秦安"],[23,25,"林下"]]},{"p":5,"w":"丁酉夏，余以截取不赴，請就京職，旋里。老者兄弟十年聚晤，歡若平生。","b":"丁酉年（1837）夏天，我也因为「截取」得了外官却不去赴任，请求改在京城任职，随后回到家乡。我们这些老兄弟分别十年又聚在一起，高兴得像年轻时一样。","g":[[2,16,16,21],[2,17,0,20]],"ws":"丁酉夏，余以截取不赴，请就京职，旋里。老者兄弟十年聚晤，欢若平生。","sp":[[6,8,"截取"],[13,15,"京職"]]},{"p":5,"w":"閒於暇日登高望遠，賦詩唱和，有某水某邱童時釣遊之感。","b":"闲暇的日子里，一起登高远望，作诗唱和；看到哪条河、哪座山，都想起小时候在那里钓鱼玩耍的情景。","g":[[2,17,21,21],[3,0,0,21]],"ws":"闲于暇日登高望远，赋诗唱和，有某水某邱童时钓游之感。","sp":[]},{"p":6,"w":"時所作春秋書法比義編成，囑余作跋，重加訂正；","b":"那时他写的《春秋书法比义》已经编成，嘱咐我写跋，又重新加以订正；","g":[[3,1,0,18]],"ws":"时所作春秋书法比义编成，嘱余作跋，重加订正；","sp":[[5,7,"書法"]]},{"p":6,"w":"及檢校詩文舊稿將付剞劂，凡一字一句義有未安者，必與余參酌商榷，終日忘倦。","b":"等到整理校对旧日的诗文稿、准备刻版印行时，凡是有一字一句意思不妥的，一定和我商量斟酌，整天都不觉得累。","g":[[3,1,19,21],[3,2,0,21],[3,3,0,6]],"ws":"及检校诗文旧稿将付剞劂，凡一字一句义有未安者，必与余参酌商榷，终日忘倦。","sp":[[9,11,"剞劂"]]},{"p":6,"w":"因笑謂余曰：「古人耄而好學，吾輩固無以堪之，但義理悅心，猶芻豢悅口，真覺樂此不疲。彼世俗有目為書癡者，豈其然乎？」","b":"他笑着对我说：「古人到老还好学，我们当然比不上；可是义理让心里快乐，就像美食让嘴里快乐，真觉得乐此不疲。世俗有人把我们看作书呆子，难道真是这样吗？」","g":[[3,3,7,21],[3,4,0,21],[3,5,0,9]],"ws":"因笑谓余曰：「古人耄而好学，吾辈固无以堪之，但义理悦心，犹刍豢悦口，真觉乐此不疲。彼世俗有目为书痴者，岂其然乎？」","sp":[[9,13,"耄而好學"],[29,31,"芻豢"]]},{"p":6,"w":"所著春秋書法比義十二卷、蓮窗書室文鈔二卷、詩賦鈔各一卷，付梓行世。","b":"他著的《春秋书法比义》十二卷、《莲窗书室文钞》二卷、诗钞和赋钞各一卷，都已刻印行世。","g":[[3,5,10,21],[3,6,0,16]],"ws":"所著春秋书法比义十二卷、莲窗书室文钞二卷、诗赋钞各一卷，付梓行世。","sp":[[28,30,"付梓"]]},{"p":7,"w":"嗚呼！以吾兄之才之學，磨厲蓄積數十年，使其得用，充督學典試之使，主持風教，為朝廷收得人之慶，庶幾大展所為；","b":"唉！以我哥哥的才学，磨炼积累了几十年，假如能被重用，做学政或主考官，主持一方教化，为朝廷选拔人才，差不多就能大展抱负了；","g":[[3,6,17,20],[3,7,0,21],[3,8,0,19]],"ws":"呜呼！以吾兄之才之学，磨厉蓄积数十年，使其得用，充督学典试之使，主持风教，为朝廷收得人之庆，庶几大展所为；","sp":[[25,27,"督學"],[27,29,"典試"],[34,36,"風教"]]},{"p":7,"w":"即不然，備位詞垣，叨陪侍從，和其聲以鳴國家之盛，文章報國，亦足酬其素志。","b":"即使不然，能进翰林院，在皇帝身边做个文学侍从，用诗文歌颂国家的兴盛，以文章报国，也足以了却平生的志愿。","g":[[3,8,20,21],[3,9,0,21],[3,10,0,6]],"ws":"即不然，备位词垣，叨陪侍从，和其声以鸣国家之盛，文章报国，亦足酬其素志。","sp":[[6,8,"詞垣"],[11,13,"侍從"]]},{"p":7,"w":"乃皆不得遂，而所以飭士習、振文風者，僅於一州一邑小試其端也，可不惜哉！","b":"可这些都没能实现，他整顿士风、振兴文风的本领，只在一州一县小小地试了一下，怎能不令人惋惜！","g":[[3,10,7,21],[3,11,0,14]],"ws":"乃皆不得遂，而所以饬士习、振文风者，仅于一州一邑小试其端也，可不惜哉！","sp":[]},{"p":7,"w":"雖然，用則施諸人，舍則傳諸其徒，垂諸文而為後世法，亦可謂立言之不朽也已。","b":"虽然如此，被任用就造福于人，不被任用就把学问传给学生，写成文章留作后世的榜样，也可以说是「立言」而不朽了。","g":[[3,11,15,21],[3,12,0,21],[3,13,0,1]],"ws":"虽然，用则施诸人，舍则传诸其徒，垂诸文而为后世法，亦可谓立言之不朽也已。","sp":[[28,30,"立言"]]},{"p":8,"w":"壬寅冬，次姪慶凱分守兗州，迎養東省。","b":"壬寅年（1842）冬天，二侄庆凯在兖州任职，把他接到山东奉养。","g":[[3,13,2,16]],"ws":"壬寅冬，次姪庆凯分守兖州，迎养东省。","sp":[[8,10,"分守"],[10,12,"兗州"],[15,17,"東省"]]},{"p":8,"w":"癸卯、甲辰連舉曾孫者二。","b":"癸卯、甲辰两年（1843、1844），接连添了两个曾孙。","g":[[3,13,17,21],[3,14,0,4]],"ws":"癸卯、甲辰连举曾孙者二。","sp":[]},{"p":8,"w":"是年春，長姪慶元攝博平篆，迎養至署，適值吾兄壽辰，","b":"这年（1844）春天，大侄庆元代理博平县知县，把他接到县署奉养，正赶上我哥哥过生日，","g":[[3,14,5,21],[3,15,0,4]],"ws":"是年春，长姪庆元摄博平篆，迎养至署，适值吾兄寿辰，","sp":[[8,12,"攝博平篆"]]},{"p":8,"w":"曾寄祝一聯云：「上侍曾祖，下抱曾孫，七世傳家綿壽考；伯宰東昌（博平為東昌屬邑），仲丞東郡，兩兒同省奉封翁。」","b":"我寄去一副祝寿对联：「上侍曾祖，下抱曾孙，七世传家绵寿考；伯宰东昌（博平是东昌府的属县），仲丞东郡，两儿同省奉封翁。」大意是：上承祖宗，下抱曾孙，家世绵延、福寿长久；大儿子在东昌府做县官，二儿子在兖州做同知，两个儿子在同一个省里奉养受封的老父亲。","g":[[3,15,5,21],[3,16,0,21],[3,17,0,0]],"ws":"曾寄祝一联云：「上侍曾祖，下抱曾孙，七世传家绵寿考；伯宰东昌（博平为东昌属邑），仲丞东郡，两儿同省奉封翁。」","sp":[[26,30,"伯宰東昌"],[40,44,"仲丞東郡"],[50,52,"封翁"]]},{"p":8,"w":"兄亦顧而樂之，方謂耄期可卜，孰意是臘遽捐館舍。","b":"哥哥看了也很高兴。正以为他一定能活到八九十岁，谁想到这年腊月他就突然去世了。","g":[[3,17,2,21]],"ws":"兄亦顾而乐之，方谓耄期可卜，孰意是腊遽捐馆舍。","sp":[[9,11,"耄期"],[19,22,"捐館舍"]]},{"p":8,"w":"回憶七十年來，所謂相處最久、相習最深者，邈如隔世，其何能無愴然於懷耶？","b":"回想七十年来，那位和我相处最久、最知心的人，如今远得像隔了一世，我心里怎能不悲伤呢？","g":[[4,0,0,21],[4,1,0,7]],"ws":"回忆七十年来，所谓相处最久、相习最深者，邈如隔世，其何能无怆然于怀耶？","sp":[]},{"p":9,"w":"茲遵兄遺命，舉一生力學之大端、余所親見聞者，臚陳顛末，俾子孫誌之弗忘。","b":"现在遵照哥哥的遗愿，把他一生用功治学的大要、我亲眼所见亲耳所闻的事，从头到尾写下来，让子孙记住，不要忘记。","g":[[4,1,8,21],[4,2,0,16]],"ws":"兹遵兄遗命，举一生力学之大端、余所亲见闻者，胪陈颠末，俾子孙志之弗忘。","sp":[[22,24,"臚陳"],[24,26,"顛末"]]},{"p":9,"w":"至平生存心之忠厚，立品之端方，重先祀，篤孝友，敦宗睦族之忍讓，處世接物之謙恭，備見於姪輩述中，概不多贅云。","b":"至于他平生心地的忠厚、品行的端正，重视祭祀祖先，孝顺父母、友爱兄弟，和睦宗族时的忍让，待人接物的谦恭，侄子们写的行述里都有详细记载，这里就不多说了。","g":[[4,2,17,21],[4,3,0,21],[4,4,0,17]],"ws":"至平生存心之忠厚，立品之端方，重先祀，笃孝友，敦宗睦族之忍让，处世接物之谦恭，备见于姪辈述中，概不多赘云。","sp":[[42,45,"姪輩述"]]},{"p":9,"w":"丙午長夏　同懷弟曾璈謹識（時年七十有五）","b":"丙午年（1846）盛夏，同胞弟弟曾璈敬记，时年七十五岁。","g":[[4,5,3,16]],"ws":"丙午长夏　同怀弟曾璈谨识（时年七十有五）","sp":[[2,4,"長夏"],[5,8,"同懷弟"]]}],"paras":[{"t":"缘起：兄长嘱我作传","s":[0,1,2,3,4,5,6,7,8,9],"c":[[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[0,7],[0,8],[0,9],[0,10],[0,11],[0,12]]},{"t":"少年：「书橱」与古灯梦","s":[10,11,12,13,14],"c":[[0,12],[0,13],[0,14],[0,15],[0,16],[0,17],[1,0]]},{"t":"应试：神童之名，名噪津门","s":[15,16,17,18,19,20,21,22],"c":[[1,0],[1,1],[1,2],[1,3],[1,4],[1,5],[1,6],[1,7],[1,8],[1,9],[1,10]]},{"t":"学问：易鉴与春秋","s":[23,24,25,26,27,28,29,30,31,32],"c":[[1,10],[1,11],[1,12],[1,13],[1,14],[1,15],[1,16],[1,17],[2,0],[2,1],[2,2],[2,3],[2,4]]},{"t":"科场：屡荐不售","s":[33,34,35,36,37],"c":[[2,4],[2,5],[2,6],[2,7],[2,8],[2,9],[2,10],[2,11],[2,12]]},{"t":"为师：四地学官","s":[38,39,40,41,42],"c":[[2,12],[2,13],[2,14],[2,15],[2,16],[2,17],[3,0]]},{"t":"晚年：著书付梓","s":[43,44,45,46],"c":[[3,1],[3,2],[3,3],[3,4],[3,5],[3,6]]},{"t":"惋惜：立言不朽","s":[47,48,49,50],"c":[[3,6],[3,7],[3,8],[3,9],[3,10],[3,11],[3,12],[3,13]]},{"t":"晚福：两子迎养，遽然而逝","s":[51,52,53,54,55,56],"c":[[3,13],[3,14],[3,15],[3,16],[3,17],[4,0],[4,1]]},{"t":"结语","s":[57,58,59],"c":[[4,1],[4,2],[4,3],[4,4],[4,5]]}],"grids":[{"top":0.16350446428571427,"bot":0.9626116071428571,"h":[[0.5515625,0.051041666666666666],[0.035416666666666666,0.051171875]]},{"top":0.16964285714285715,"bot":0.9670758928571429,"h":[[0.5541666666666667,0.051432291666666664],[0.03697916666666667,0.051171875]]},{"top":0.16127232142857142,"bot":0.9698660714285714,"h":[[0.5546875,0.05130208333333333],[0.036458333333333336,0.051171875]]},{"top":0.16741071428571427,"bot":0.9681919642857143,"h":[[0.5552083333333333,0.05130208333333333],[0.03854166666666667,0.051171875]]},{"top":0.17745535714285715,"bot":0.9693080357142857,"h":[[0.5541666666666667,0.05130208333333333],[0.03854166666666667,0.051171875]]}],"slots":22,"gloss":{"仲兄學磎":"二哥曾璞，字学溪（「磎」同「溪」）。","輓詩":"悼念死者的诗。","易簀":"临终。典出《礼记》：曾子临终前命人换掉（易）身下不合礼制的竹席（簀）。","濟寧州署":"济宁州的官署。当时次子庆凯任济宁直隶州知州，曾璇随子居此。","姪輩":"侄子们，指曾璇的儿子庆元、庆凯。","庭訓":"父亲的教诲。典出孔子在庭院里教导儿子孔鲤。","就傅":"跟随老师读书。","入學":"考中秀才，进入县学。","食餼":"成为廪生，按月领官府发给的钱粮。","鄉舉":"乡试考中举人。","芸窗":"书房。芸草可以防蠹虫，古人用来藏书。","棘闈":"科举考场。考场四周插满荆棘，防止作弊。","薄宦":"官职卑微，自谦之词。","截取":"清代制度：举人、教官等候选满一定年限，按资历「截取」，选用为知县等官。","解組":"解下系官印的绶带，即辞官。","書廚":"书橱，形容读书多、记得牢。","天祿照讀":"汉代刘向在天禄阁校书，夜里有黄衣老人吹燃青藜杖为他照明（「太乙燃藜」）。","先君子":"已去世的父亲，指十四世静年公。","瀆問":"冒昧发问。","童子試":"最初级的科举考试（县试、府试），考过的叫「童生」。","郡守孫公":"天津府知府孙公（名字待考）。","院試":"由学政主持的考试，考中就是秀才。","學使":"学政，朝廷派到各省主持考试、督察教育的官。","不售":"没有考中。","摭拾":"拾取，这里指搬弄典故。","餖飣":"把食物堆砌在盘里，比喻文章堆砌辞藻典故。","類書":"按类别汇编典故词藻的工具书，作诗赋时可以查。","古學":"考经解、诗赋等「古学」的科目，区别于八股文。","沈公":"沈初，号云椒，乾隆年间的直隶学政。","博士弟子員":"县学生员，就是秀才。","廩餼":"廪生领取的钱粮。","冠軍":"考第一名。","津門":"天津一带。盐山当时属天津府。","漏下四鼓":"古代用漏壶计时，四鼓即四更，约凌晨一点到三点。","鄉薦":"乡试中举。","座主":"考中者对主考官的尊称，也称座师。","劉文清公":"刘墉（1720—1805），谥文清，乾隆五十七年（1792）顺天乡试主考官。","下帷":"放下帷幕闭门读书，典出汉代董仲舒。","連牀風雨":"风雨之夜兄弟同床共话，形容兄弟情深。","帖括":"科举应试的文章，泛指八股文。","實學":"真实有用的学问，相对于应试文章。","聘享":"诸侯之间的聘问和宴享之礼。","禹貢":"《尚书》中的一篇，记载九州的山川、河道、物产。","易鑑":"以史证易的著作，家谱著录为《易鉴补遗》二卷。","書法":"《春秋》的「书法」：孔子用字的褒贬规则，所谓「春秋笔法」。","屬辭比事":"排比文辞、类比史事，语出《礼记·经解》「属辞比事，春秋教也」。","菑畬":"开垦田地（菑是新开的田，畬是耕了三年的熟田），比喻在经书上深耕。","機杼":"织布机。「自出机杼」指文章有独创。","鶴和堂":"刘家旧宅的堂名。","禮部":"礼部主持的会试，考中就是进士。","額滿被遺":"名额已满而落选。","房考":"会试中分房阅卷的同考官。","主司":"主考官。","挑二等":"「大挑」：清代从多次会试不中的举人中挑选，一等用作知县，二等用作学官（教谕、训导）。","甲第":"进士。","雁行":"大雁飞行有序，比喻兄弟。","烏養":"乌鸦反哺，比喻子女奉养父母。","部文":"吏部的公文。","秦安":"甘肃秦安县，今属天水市。","林下":"山林田野之间，指退隐。","京職":"在京城任职。曾璈后来钦授翰林院典簿。","剞劂":"刻刀，指雕版刻书。","耄而好學":"到老还好学。语出《礼记》。","芻豢":"牛羊猪狗等肉食。语出《孟子》：「理义之悦我心，犹刍豢之悦我口。」","付梓":"刻版印行。梓是刻书用的木板。","督學":"学政。","典試":"主持乡试、会试的考官。","風教":"风俗教化。","詞垣":"翰林院。","侍從":"皇帝身边的文学侍从官。","立言":"古人说的「三不朽」：立德、立功、立言。","分守":"分管一方。庆凯当时任兖州府同知。","兗州":"山东兖州府。","東省":"山东省。","攝博平篆":"代理博平县知县（篆指官印）。博平县今属山东聊城。","伯宰東昌":"长子在东昌府做县官，指庆元署理博平知县。","仲丞東郡":"次子在东郡做副职（丞），指庆凯任兖州府同知。","封翁":"因儿子做官而受封的父亲。","耄期":"八九十岁到百岁的高寿。","捐館舍":"抛下居所，去世的委婉说法。","臚陳":"逐条陈述。","顛末":"始末。","姪輩述":"侄子们写的行述，即庆元、庆凯所撰《盐山刘荫渠公行述》。","同懷弟":"同胞弟弟。","長夏":"夏季最长的时节，盛夏。"},"timeline":[[1770,"庚寅","乾隆三十五年",1,"生於鹽山縣城"],[1786,"丙午","乾隆五十一年",17,"古學冠郡，入縣學"],[1787,"丁未","乾隆五十二年",18,"試第一，食廩餼"],[1792,"壬子","乾隆五十七年",23,"中舉，座師劉墉"],[1805,"乙丑","嘉慶十年",36,"與弟同試禮部，落第"],[1808,"戊辰","嘉慶十三年",39,"大挑二等"],[1812,"壬申","嘉慶十七年",43,"赴任學官"],[1833,"癸巳","道光十三年",64,"選秦安令，旋辭歸"],[1838,"戊戌","道光十八年",69,"仲兄卒，囑弟作傳"],[1842,"壬寅","道光二十二年",73,"迎養山東"],[1844,"甲辰","道光二十四年",75,"臘月卒於濟寧"],[1846,"丙午","道光二十六年",null,"弟曾璈作此傳"]],"titleSeg":[0,0,1,6]};
+const IMGS = ["img/00.jpg", "img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg", "img/06.jpg", "img/07.jpg"];
+const $ = s => document.querySelector(s);
+const CN = "一二三四五六七八九十";
+const store = { get(k){ try{ return localStorage.getItem("zhuan-"+k) }catch(e){ return null } },
+                set(k,v){ try{ localStorage.setItem("zhuan-"+k,v) }catch(e){} } };
+const isMobile = () => matchMedia("(max-width:860px)").matches;
+const hdr = () => document.querySelector(".top").offsetHeight;
+function setHH(){ document.documentElement.style.setProperty("--hh", hdr() + "px"); }
+setHH(); addEventListener("resize", setHH);
+if (document.fonts) document.fonts.ready.then(setHH);
+
+// 篇题当作第 -1 句
+const TITLE = { p:-1, w:D.title[0], ws:"伯兄荫渠公传", b:D.title[1], g:[D.titleSeg], sp:[] };
+const sent = i => i < 0 ? TITLE : D.sents[i];
+const leafImgs = IMGS.slice(2, 7).map(src => { const im = new Image(); im.src = src; return im; });
+const ready = Promise.all(leafImgs.map(im => im.decode ? im.decode().catch(()=>{}) : new Promise(r => im.onload = r)));
+
+let script = store.get("z") || "t";
+
+/* ---------- 文字渲染（标点、注释） ---------- */
+const PU = /[，。：；！？、「」『』《》（）　]/;
+function esc(s){ return s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function renderW(s){
+  const t = script === "s" ? (s.ws || s.w) : s.w;
+  let html = "", k = 0;
+  const sp = s.sp || [];
+  for (const [a, b, key] of sp){
+    html += chars(t.slice(k, a));
+    html += `<span class="term" tabindex="0" role="button" data-k="${esc(key)}">${chars(t.slice(a, b))}</span>`;
+    k = b;
+  }
+  return html + chars(t.slice(k));
+}
+function chars(t){ let h = ""; for (const c of t) h += PU.test(c) ? `<span class="pu">${c}</span>` : esc(c); return h; }
+
+
+/* ---------- 纠错：打开金数据表单，所在位置和原句经 x_field_1 一并提交 ---------- */
+const FORM = "https://sxvvyvvt.jsjform.com/f/bMuGXq";
+const BOOK = document.querySelector(".brand h1").textContent.trim();
+function fbUrl(i){
+  let ctx = `《${BOOK}》`;
+  if (i != null && i >= 0){ const s = D.sents[i]; ctx += `｜${CN[s.p]} ${D.paras[s.p].t}｜${s.w}`; }
+  return FORM + "?x_field_1=" + encodeURIComponent(ctx.slice(0, 300));
+}
+function fbPara(pi){
+  return FORM + "?x_field_1=" + encodeURIComponent(`《${BOOK}》｜${CN[pi]} ${D.paras[pi].t}`.slice(0, 300));
+}
+
+/* ---------- 几何：原书上的列、格 ---------- */
+function colBox(leaf, ci){           // 返回占整叶的比例
+  const g = D.grids[leaf], [c0, p] = g.h[ci < 9 ? 0 : 1], j = ci % 9;
+  const xc = c0 + (8 - j) * p;
+  return { x0: xc - p/2, x1: xc + p/2, y0: g.top, y1: g.bot };
+}
+function slotY(leaf, a, b){
+  const g = D.grids[leaf], sh = (g.bot - g.top) / D.slots;
+  return [g.top + a * sh, g.top + (b + 1) * sh];
+}
+// 每叶每列有哪些句子
+const colIndex = {};
+function addIdx(i){ for (const [l, c, a, b] of sent(i).g){ (colIndex[l+","+c] ||= []).push([i, a, b]); } }
+addIdx(-1); D.sents.forEach((_, i) => addIdx(i));
+
+/* ---------- 读本 ---------- */
+function buildRead(){
+  $("#fbAll").href = fbUrl(null);
+  $("#slipImg").src = IMGS[1];
+  const KEY = new Set([1770, 1792, 1808, 1833, 1844]);
+  $("#tl").innerHTML = D.timeline.map(([y, gz, era, age, ev]) =>
+    `<li class="${KEY.has(y) ? "k" : ""} ${age == null ? "after" : ""}"><div class="era">${era}<span class="age">${"　" + gz}${age ? "　" + age + "歲" : "　身後"}</span></div><div class="yr">${y}</div><i class="dot"></i><div class="gz">${gz}${age ? "　" + age + "歲" : ""}</div><div class="ev">${ev}</div></li>`).join("");
+  const toc = $("#toc");
+  toc.innerHTML = `<option value="">跳到…</option>` + D.paras.map((p, i) => `<option value="${i}">${CN[i]}　${p.t}</option>`).join("");
+  toc.onchange = () => { if (toc.value !== "") document.getElementById("p" + toc.value).scrollIntoView({behavior:"smooth"}); toc.value = ""; };
+  const box = $("#paras");
+  box.innerHTML = D.paras.map((p, pi) => {
+    const leaves = [...new Set(p.c.map(c => c[0]))].map(l => CN[l]).join("、");
+    return `<section class="para" id="p${pi}">
+      <h2><span class="n">${CN[pi]}</span>${esc(p.t)}<span class="where">原书第${leaves}页</span></h2>
+      <div class="pairs">${p.s.map(i => `<div class="pair" data-i="${i}"><div class="w">${renderW(D.sents[i])}</div><div class="b">${esc(D.sents[i].b)}</div><div class="pact"><a class="fb" href="${fbUrl(i)}" target="_blank" rel="noopener">纠错</a><button class="gob">在原书中看 ›</button></div></div>`).join("")}<p class="fbsec"><a href="${fbPara(pi)}" target="_blank" rel="noopener">对本段纠错或补充 ›</a></p></div>
+      <div class="stripbox"><div class="strip" data-p="${pi}" title="点击打开原书"><canvas></canvas><div class="layer"></div></div>
+      <div class="stripcap">原书第${leaves}页　　点图看原书</div></div>
+    </section>`;
+  }).join("");
+  box.addEventListener("mouseover", e => { const el = e.target.closest(".pair"); if (el && matchMedia("(hover:hover)").matches) markStrip(+el.dataset.i); });
+  box.addEventListener("click", e => {
+    if (e.target.closest(".term") && !document.body.classList.contains("nogl")) return;
+    if (e.target.closest(".fb")) return;
+    const go = e.target.closest(".gob");
+    if (go){ openBookAt(+go.closest(".pair").dataset.i); return; }
+    const el = e.target.closest(".pair");
+    if (el){ setActive(+el.dataset.i); return; }
+    const st = e.target.closest(".strip");
+    if (st){
+      const pi = +st.dataset.p, cur = activeIdx != null && D.sents[activeIdx]?.p === pi ? activeIdx : D.paras[pi].s[0];
+      openBookAt(cur);
+    }
+  });
+  ready.then(drawStrips);
+}
+let activeIdx = null;
+function setActive(i, flash){
+  document.querySelectorAll(".pair.on").forEach(e => e.classList.remove("on"));
+  activeIdx = i;
+  const el = document.querySelector(`.pair[data-i="${i}"]`);
+  if (el){ el.classList.add("on"); if (flash){ el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash"); } }
+  markStrip(i);
+}
+const stripLayouts = [];
+function drawStrips(){
+  const H0 = isMobile() ? 300 : Math.round(Math.min(560, Math.max(380, innerHeight - 200)));
+  document.querySelectorAll(".strip").forEach(st => {
+    const pi = +st.dataset.p, p = D.paras[pi], cv = st.querySelector("canvas");
+    const covered = {};
+    for (const i of p.s) for (const [l, c, a, b] of D.sents[i].g){ const k = l+","+c; for (let s = a; s <= b; s++) (covered[k] ||= new Set()).add(s); }
+    const g0 = D.grids[p.c[0][0]], im0 = leafImgs[p.c[0][0]];
+    let H = H0;
+    const scale = H / ((g0.bot - g0.top) * im0.naturalHeight * 1.02);
+    // 布局：从右往左
+    const items = []; let prev = null;
+    for (const [l, c] of p.c){
+      const b = colBox(l, c), im = leafImgs[l];
+      const gap = prev && (prev[0] !== l || (prev[1] < 9) !== (c < 9)) ? 10 : 0;
+      items.push({ l, c, b, im, gap, w: (b.x1 - b.x0) * im.naturalWidth * scale });
+      prev = [l, c];
+    }
+    let total = items.reduce((s, it) => s + it.w + it.gap, 0);
+    if (isMobile()){   // 手机上：列少时放大，让小图铺满屏幕宽度
+      const cw = st.parentElement.clientWidth || total;
+      const f = Math.min(1.6, Math.max(1, cw / total));
+      H *= f; total *= f; items.forEach(it => { it.w *= f; it.gap *= f; });
+    }
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    cv.width = Math.ceil(total * dpr); cv.height = Math.ceil(H * dpr);
+    cv.style.width = total + "px"; cv.style.height = H + "px";
+    const ctx = cv.getContext("2d"); ctx.scale(dpr, dpr);
+    const css = getComputedStyle(document.documentElement);
+    ctx.fillStyle = css.getPropertyValue("--paper2").trim(); ctx.fillRect(0, 0, total, H);
+    let x = total; const lay = {};
+    for (const it of items){
+      x -= it.gap;
+      x -= it.w;
+      const { b, im } = it, W = im.naturalWidth, Hh = im.naturalHeight;
+      const y0 = b.y0 - (b.y1 - b.y0) * .01, y1 = b.y1 + (b.y1 - b.y0) * .01;
+      ctx.drawImage(im, b.x0 * W, y0 * Hh, (b.x1 - b.x0) * W, (y1 - y0) * Hh, x, 0, it.w, H);
+      // 不属于本段的格子淡化
+      const set = covered[it.l+","+it.c] || new Set();
+      const sh = (b.y1 - b.y0) / D.slots;
+      ctx.fillStyle = css.getPropertyValue("--dim").trim();
+      for (let s = 0; s < D.slots; s++) if (!set.has(s)){
+        const ya = ((b.y0 + s * sh) - y0) / (y1 - y0) * H, yb = ((b.y0 + (s + 1) * sh) - y0) / (y1 - y0) * H;
+        ctx.fillRect(x, ya, it.w, yb - ya + .5);
+      }
+      lay[it.l+","+it.c] = { x, w: it.w, y0, y1, H };
+    }
+    stripLayouts[pi] = lay;
+    st.style.width = Math.min(total, st.parentElement.clientWidth || total) + "px";
+    st.style.maxWidth = "100%";
+    st.querySelector(".layer").style.cssText = `width:${total}px;height:${H}px`;
+    st.scrollLeft = st.scrollWidth;
+  });
+  if (activeIdx != null) markStrip(activeIdx);
+}
+function markStrip(i){
+  const s = D.sents[i]; if (!s) return;
+  const st = document.querySelector(`.strip[data-p="${s.p}"]`), lay = stripLayouts[s.p];
+  if (!st || !lay) return;
+  const layer = st.querySelector(".layer");
+  let html = "", minX = 1e9, maxX = 0;
+  for (const [l, c, a, b] of s.g){
+    const L = lay[l+","+c]; if (!L) continue;
+    const [ya, yb] = slotY(l, a, b);
+    const top = (ya - L.y0) / (L.y1 - L.y0) * L.H, h = (yb - ya) / (L.y1 - L.y0) * L.H;
+    html += `<div class="hl" style="left:${L.x + 1}px;width:${L.w - 2}px;top:${top}px;height:${h}px"></div>`;
+    minX = Math.min(minX, L.x); maxX = Math.max(maxX, L.x + L.w);
+  }
+  layer.innerHTML = html;
+  const vis = st.clientWidth;
+  if (minX < st.scrollLeft || maxX > st.scrollLeft + vis) st.scrollTo({ left: (minX + maxX) / 2 - vis / 2, behavior: "smooth" });
+}
+
+/* ---------- 原书 ---------- */
+// 页面单元：封面、题签、各叶（手机上拆成右/左半叶）、封底
+function units(){
+  const u = [{ img: 0, lab: "书衣" }, { img: 1, lab: "题签" }];
+  for (let l = 0; l < 5; l++){
+    if (isMobile()){ u.push({ leaf: l, half: 0, lab: `第${CN[l]}页 · 右半` }, { leaf: l, half: 1, lab: `第${CN[l]}页 · 左半` }); }
+    else u.push({ leaf: l, lab: `第${CN[l]}页` });
+  }
+  u.push({ img: 7, lab: "封底" });
+  return u;
+}
+let U = units(), cur = 0, bookSel = null;
+function unitOf(leaf, ci){ return U.findIndex(u => u.leaf === leaf && (u.half == null || u.half === (ci < 9 ? 0 : 1))); }
+function showUnit(n){
+  U = units(); cur = Math.max(0, Math.min(U.length - 1, n));
+  const u = U[cur], vp = $("#vp"), sw = $("#sw"), pg = $("#pg"), ov = $("#ov");
+  $("#lab").textContent = u.lab;
+  $("#next").disabled = cur === U.length - 1; $("#prev").disabled = cur === 0;
+  const stage = $(".stage").clientWidth;
+  const availH = isMobile() ? innerHeight * 0.62 : innerHeight - 150;
+  let iw, ih;
+  if (u.leaf != null){
+    const im = leafImgs[u.leaf]; pg.src = im.src; iw = im.naturalWidth || 1400; ih = im.naturalHeight || 1307;
+    const fw = u.half != null ? iw / 2 : iw;
+    let w = Math.min(stage, availH * fw / ih); if (isMobile()) w = stage;
+    const h = w * ih / fw;
+    vp.style.width = w + "px"; vp.style.height = h + "px";
+    sw.style.width = (u.half != null ? 2 * w : w) + "px";
+    sw.style.transform = u.half === 0 ? `translateX(${-w}px)` : "none";
+    drawHot(u.leaf);
+  } else {
+    pg.src = IMGS[u.img]; const tmp = new Image(); tmp.src = IMGS[u.img];
+    const done = () => {
+      iw = tmp.naturalWidth; ih = tmp.naturalHeight;
+      const h = Math.min(availH, (isMobile() ? stage : 1e9) * ih / iw), w = h * iw / ih;
+      vp.style.width = w + "px"; vp.style.height = h + "px"; sw.style.width = w + "px"; sw.style.transform = "none";
+    };
+    tmp.complete ? done() : (tmp.onload = done);
+    ov.innerHTML = "";
+  }
+  renderPanel();
+  keepVisible();
+  history.replaceState(null, "", "#book/" + cur);
+}
+function drawHot(leaf){
+  let h = "";
+  for (let c = 0; c < 18; c++){
+    if (!colIndex[leaf+","+c]) continue;
+    const b = colBox(leaf, c);
+    h += `<div class="hot" data-c="${c}" style="left:${b.x0*100}%;width:${(b.x1-b.x0)*100}%;top:${b.y0*100}%;height:${(b.y1-b.y0)*100}%"></div>`;
+  }
+  if (bookSel != null) for (const [l, c, a, b] of sent(bookSel).g){
+    if (l !== leaf) continue;
+    const x = colBox(l, c), [ya, yb] = slotY(l, a, b);
+    h += `<div class="hl" style="left:${x.x0*100}%;width:${(x.x1-x.x0)*100}%;top:${ya*100}%;height:${(yb-ya)*100}%"></div>`;
+  }
+  $("#ov").innerHTML = h;
+}
+$("#ov").addEventListener("click", e => {
+  const hot = e.target.closest(".hot"); if (!hot) return;
+  const u = U[cur], c = +hot.dataset.c, r = hot.getBoundingClientRect();
+  const yFrac = D.grids[u.leaf].top + (e.clientY - r.top) / r.height * (D.grids[u.leaf].bot - D.grids[u.leaf].top);
+  const g = D.grids[u.leaf], slot = Math.floor((yFrac - g.top) / ((g.bot - g.top) / D.slots));
+  const list = colIndex[u.leaf+","+c];
+  let best = list[0], bd = 1e9;
+  for (const it of list){ const d = slot < it[1] ? it[1] - slot : slot > it[2] ? slot - it[2] : 0; if (d < bd){ bd = d; best = it; } }
+  selectBook(best[0], false);
+});
+function selectBook(i, turn){
+  bookSel = i;
+  if (turn){ const [l, c] = sent(i).g[0]; const n = unitOf(l, c); if (n >= 0 && n !== cur){ showUnit(n); return; } }
+  const u = U[cur]; if (u.leaf != null) drawHot(u.leaf);
+  renderPanel(true);
+  keepVisible();
+}
+// 手机上：让高亮的那几列不被顶栏和底部面板挡住
+function keepVisible(){
+  if (!isMobile()) return;
+  requestAnimationFrame(() => {
+    const hl = $("#ov .hl"); if (!hl) return;
+    const r = hl.getBoundingClientRect(), topLim = hdr() + 10, botLim = innerHeight - $("#panel").offsetHeight - 12;
+    if (r.top < topLim) scrollBy({ top: r.top - topLim, behavior: "smooth" });
+    else if (r.bottom > botLim) scrollBy({ top: Math.min(r.top - topLim, r.bottom - botLim), behavior: "smooth" });
+  });
+}
+function renderPanel(open){
+  const P = $("#panel"), u = U[cur];
+  if (open) P.classList.remove("min");
+  const x = `<button class="x" aria-label="收起">${P.classList.contains("min") ? "︿" : "﹀"}</button>`;
+  if (u.leaf == null){
+    const txt = u.img === 1
+      ? `<div class="k">题签</div><div class="w">高城劉蔭渠先生傳<br><span style="font-size:var(--f2)">平陵毛鴻賓題籤</span></div><div class="b">题签是贴在书衣上的书名条，由毛鸿宾（山东历城人，后官至两广总督）题写。「高城」是盐山的古称。右边一行是后人的手写题记：「鹽山劉蔭渠廣文先生詩」。「广文」是明清时对县学教官的尊称，正合曾璇公做了二十多年学官的经历。</div>`
+      : u.img === 0 ? `<div class="k">书衣</div><div class="empty">这是国家图书馆藏本的封面（书衣），中间是馆藏印的水印。往左翻，下一页是题签，再往后是正文五页。</div>`
+      : `<div class="k">封底</div><div class="empty">全书完。正文共五页（十个半页），约一千六百字。</div>`;
+    P.innerHTML = x + txt + `<div class="acts"><button data-a="first">从正文第一句开始</button></div>`;
+    return;
+  }
+  if (bookSel == null){
+    P.innerHTML = x + `<div class="k">${u.lab}</div><div class="empty">点原书上任意一列，这里会显示那一句的录文和白话。</div>`;
+    return;
+  }
+  const s = sent(bookSel), i = bookSel;
+  const onThis = s.g.filter(([l, c]) => unitOf(l, c) === cur).length;
+  const more = onThis < s.g.length ? `<span class="cont">${unitOf(s.g[0][0], s.g[0][1]) < cur ? "（上接前页）" : "（下接后页）"}</span>` : "";
+  const label = i < 0 ? "篇题" : `${CN[s.p]} · ${esc(D.paras[s.p].t)}`;
+  P.innerHTML = x + `<div class="k">${label}${more}</div>
+    <div class="w">${renderW(s)}</div><div class="b">${esc(s.b)}</div>
+    <div class="acts"><button data-a="prev" ${i <= -1 ? "disabled" : ""}>‹ 上一句</button><button data-a="nextS" ${i >= D.sents.length - 1 ? "disabled" : ""}>下一句 ›</button>
+    ${i >= 0 ? `<a class="fb" href="${fbUrl(i)}" target="_blank" rel="noopener">纠错</a><button class="go" data-a="read">在读本里看 →</button>` : ""}</div>`;
+}
+$("#panel").addEventListener("click", e => {
+  if (e.target.closest(".x")){ $("#panel").classList.toggle("min"); renderPanel(); return; }
+  const a = e.target.closest("[data-a]")?.dataset.a; if (!a) return;
+  if (a === "prev") selectBook(bookSel - 1, true);
+  if (a === "nextS") selectBook(bookSel + 1, true);
+  if (a === "first") selectBook(-1, true);
+  if (a === "read"){ const i = bookSel; setMode("read"); setActive(i, true); document.querySelector(`.pair[data-i="${i}"]`)?.scrollIntoView({ block: "center" }); }
+});
+$("#next").onclick = () => showUnit(cur + 1);
+$("#prev").onclick = () => showUnit(cur - 1);
+addEventListener("keydown", e => {
+  if (mode !== "book" || e.target.closest("input,select")) return;
+  if (e.key === "ArrowRight") showUnit(cur + 1);
+  if (e.key === "ArrowLeft") showUnit(cur - 1);
+  if (e.key === "Escape") hidePop();
+});
+// 手指向右滑 = 往左翻 = 下一页（和翻古书一样）
+let tx = null, ty = null;
+$("#vp").addEventListener("touchstart", e => { if (e.touches.length === 1){ tx = e.touches[0].clientX; ty = e.touches[0].clientY; } }, { passive: true });
+$("#vp").addEventListener("touchend", e => {
+  if (tx == null) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty; tx = null;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) showUnit(cur + (dx < 0 ? 1 : -1));
+});
+function openBookAt(i){
+  setMode("book");
+  const [l, c] = sent(i).g[0];
+  bookSel = i; showUnit(unitOf(l, c));
+}
+
+/* ---------- 模式、选项 ---------- */
+let mode = "read";
+function setMode(m){
+  mode = m;
+  document.querySelectorAll("[data-mode]").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === m));
+  $("#read").hidden = m !== "read"; $("#book").hidden = m !== "book";
+  hidePop();
+  if (m === "book"){ if (cur === 0 && bookSel == null) cur = 2; showUnit(cur); scrollTo(0, 0); }
+  else history.replaceState(null, "", location.pathname + location.search);
+}
+document.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => setMode(b.dataset.mode));
+function setView(v){
+  document.body.classList.remove("v-wb", "v-w", "v-b"); document.body.classList.add("v-" + v);
+  document.querySelectorAll("[data-v]").forEach(b => b.setAttribute("aria-pressed", b.dataset.v === v)); store.set("v", v);
+}
+document.querySelectorAll("[data-v]").forEach(b => b.onclick = () => setView(b.dataset.v));
+function setScript(z){
+  script = z; store.set("z", z);
+  document.querySelectorAll("[data-z]").forEach(b => b.setAttribute("aria-pressed", b.dataset.z === z));
+  document.querySelectorAll(".pair").forEach(el => el.querySelector(".w").innerHTML = renderW(D.sents[+el.dataset.i]));
+  if (mode === "book") renderPanel();
+}
+document.querySelectorAll("[data-z]").forEach(b => b.onclick = () => setScript(b.dataset.z));
+$("#optP").onchange = e => { document.body.classList.toggle("nop", !e.target.checked); store.set("p", e.target.checked ? 1 : 0); };
+$("#optG").onchange = e => { document.body.classList.toggle("nogl", !e.target.checked); store.set("g", e.target.checked ? 1 : 0); };
+
+/* ---------- 注释浮层 ---------- */
+const pop = $("#pop");
+function hidePop(){ pop.hidden = true; }
+document.addEventListener("click", e => {
+  const t = e.target.closest(".term");
+  if (t && !document.body.classList.contains("nogl")){
+    e.stopPropagation();
+    const k = t.dataset.k, name = script === "s" ? (D.glossS[k] || k) : k;
+    pop.innerHTML = `<b>${esc(name)}</b>${esc(D.gloss[k] || "")}`; pop.hidden = false;
+    if (!isMobile()){
+      const r = t.getBoundingClientRect(), pw = 320;
+      pop.style.left = Math.max(8, Math.min(innerWidth - pw - 8, r.left)) + "px";
+      const below = r.bottom + 8, ph = pop.offsetHeight;
+      pop.style.top = (below + ph > innerHeight ? r.top - ph - 8 : below) + "px";
+    }
+    return;
+  }
+  if (!e.target.closest("#pop")) hidePop();
+}, true);
+addEventListener("scroll", () => { if (!isMobile()) hidePop(); }, { passive: true });
+
+$("#slipImg").onclick = () => { const z = $("#zoom"); z.querySelector("img").src = IMGS[1]; z.hidden = false; };
+$("#zoom").onclick = () => $("#zoom").hidden = true;
+
+/* ---------- 启动 ---------- */
+buildRead();
+setView(store.get("v") || "wb");
+setScript(script);
+if (store.get("p") === "0"){ $("#optP").checked = false; document.body.classList.add("nop"); }
+if (store.get("g") === "0"){ $("#optG").checked = false; document.body.classList.add("nogl"); }
+let lastMobile = isMobile(), rt;
+addEventListener("resize", () => {
+  clearTimeout(rt);
+  rt = setTimeout(() => {
+    drawStrips();
+    if (mode === "book"){
+      const u = U[cur], m = isMobile();
+      if (m !== lastMobile && u.leaf != null){ U = units(); cur = U.findIndex(x => x.leaf === u.leaf && (x.half == null || x.half === (u.half ?? 0))); }
+      showUnit(cur);
+    }
+    lastMobile = isMobile();
+  }, 150);
+});
+const hm = location.hash.match(/^#book\/(\d+)/);
+if (hm){ cur = +hm[1]; ready.then(() => setMode("book")); }
+
+/* 大字模式 */
+(() => {
+  const b = document.getElementById("bigbtn"), r = document.documentElement;
+  const set = on => { r.classList.toggle("big", on); if (b) b.setAttribute("aria-pressed", on); try { localStorage.setItem("ys-big", on ? "1" : ""); } catch (e) {} dispatchEvent(new Event("resize")); };
+  try { if (localStorage.getItem("ys-big")) set(true); } catch (e) {}
+  if (b) b.onclick = () => set(!r.classList.contains("big"));
+})();
+/* 手机顶栏：滚过开头后收成一行 */
+(() => {
+  const top = document.querySelector(".top"); let c = null;
+  const f = () => { const on = scrollY > 160; if (on === c) return; c = on; top.classList.toggle("compact", on);
+    document.documentElement.style.setProperty("--hh", top.offsetHeight + "px"); };
+  addEventListener("scroll", f, { passive: true }); f();
+})();
+
+/* 记住读到哪里（只存在本机），下次打开时提示继续 */
+(() => {
+  const K = "ys-pos:" + location.pathname.replace(/index\.html$/, ""), SEL = ".sec[id],.piece[id],.e[id],.essay[id],.juan[id],.gong[id],.para[id]";
+  const label = el => ((el.querySelector("h2,h3,.ptitle,.jing")?.textContent || el.textContent || "").replace(/\s+/g, "").slice(0, 20));
+  let t = null;
+  addEventListener("scroll", () => { clearTimeout(t); t = setTimeout(() => {
+    if (scrollY < 600) return;
+    const hh = document.querySelector(".top")?.offsetHeight || 60;
+    const el = document.elementFromPoint(innerWidth / 2, hh + 60)?.closest(SEL);
+    if (el && el.offsetParent) try { localStorage.setItem(K, JSON.stringify({ id: el.id, t: label(el) })); } catch (e) {}
+  }, 400); }, { passive: true });
+  let v = null; try { v = JSON.parse(localStorage.getItem(K) || "null"); } catch (e) {}
+  if (!v || location.hash || !document.getElementById(v.id)) return;
+  const d = document.createElement("div"); d.id = "resume";
+  d.innerHTML = `<span>上次读到</span><a href="#${v.id}"></a><button aria-label="关闭">×</button>`;
+  d.querySelector("a").textContent = (v.t || "继续") + " ›";
+  d.querySelector("a").onclick = () => setTimeout(() => d.remove(), 50);
+  d.querySelector("button").onclick = () => d.remove();
+  document.body.appendChild(d);
+  setTimeout(() => { addEventListener("scroll", () => { if (scrollY > 900) d.remove(); }, { passive: true }); }, 1500);
+})();
+document.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.classList?.contains("term")) e.target.click(); });
+</script>
+</body>
+</html>

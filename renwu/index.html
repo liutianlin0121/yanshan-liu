@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6eddb">
+<meta name="color-scheme" content="light">
+<title>人物小传 · 才元刘氏先世著作</title>
+<meta name="description" content="才元刘氏先世十余位先人的小传：据家谱、方志、传与行述、齿录、实录、诗文集等材料写成，逐条注明出处。">
+<style>
+:root{
+  --paper:#f6eddb; --paper2:#eee0c3; --card:#fbf5ea; --ink:#2b231c; --ink2:#5c4f42; --ink3:#6e5f52;
+  --line:#dccaa8; --red:#a3422a; --red2:#cb653e; --hl:rgba(203,101,62,.11);
+  --shadow:0 1px 2px rgba(60,40,20,.05),0 4px 16px rgba(60,40,20,.05);
+  --serif-tc:"Noto Serif CJK TC","Source Han Serif TC","Noto Serif TC","Songti TC","STSongti-TC-Regular","PMingLiU",serif;
+  --serif-sc:"Noto Serif CJK SC","Source Han Serif SC","Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:20px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif-sc);font-size:16px;line-height:1.85;line-break:strict;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red2);outline-offset:3px;border-radius:6px}
+h1{font-family:var(--serif-tc);font-weight:600;font-size:28px;letter-spacing:.16em;margin:0;line-height:1.4}
+.by{font-size:13px;color:var(--ink3);margin-top:10px}
+.lead{color:var(--ink2);margin:20px 0 0;max-width:40em}
+h2.sh{font-family:var(--serif-tc);font-weight:600;font-size:13px;letter-spacing:.4em;color:var(--ink3);margin:52px 0 14px;display:flex;align-items:center;gap:16px}
+h2.sh::after{content:"";flex:1;height:1px;background:var(--line)}
+.dl{margin:14px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink3)}
+.dl a{color:var(--red);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;margin-right:6px}
+.note{margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;color:var(--ink2);font-size:14px;box-shadow:var(--shadow)}
+footer{margin-top:44px;font-size:13px;color:var(--ink3);border-top:1px solid var(--line);padding-top:18px}
+footer a{color:var(--red)}
+.pg{font-family:var(--sans);font-size:11.5px;color:var(--red);background:none;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin-left:8px;cursor:zoom-in;vertical-align:2px;line-height:1.6}
+.pg:hover{border-color:var(--red)}
+.pgs{white-space:nowrap}
+.pgs .pg[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+:root{--sn-w:880px}
+.wrap{max-width:880px;margin:0 auto;padding:48px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+/* 世系图：与首页同一套画法（世次列 + 竖线 + 圆点），连线由脚本按实际位置画 */
+.treebox{position:relative;left:50%;transform:translateX(-50%);width:min(1120px,calc(100vw - 32px));margin:32px 0 0;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:22px 22px 14px}
+.treebox .cap{font-family:var(--sans);font-size:12px;color:var(--ink3);margin:0 0 12px;display:flex;flex-wrap:wrap;gap:4px 18px}
+.treebox .cap i{display:inline-block;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--ink3);margin-right:6px;vertical-align:-1px}
+.treebox .cap i.k{background:var(--red);border-color:var(--red)}
+.tscroll{overflow-x:auto;scrollbar-width:thin}
+.treebox .hint{display:none}
+.tree{display:grid;grid-template-columns:44px repeat(var(--cols),minmax(0,1fr));column-gap:12px;position:relative;min-width:980px}
+.tree .g{grid-column:1;white-space:nowrap;font-family:var(--serif-tc);font-size:13px;color:var(--ink3);text-align:right;padding-top:9px;letter-spacing:.04em}
+.tree .c{position:relative;padding:4px 0 10px 18px;min-height:46px;min-width:0}
+.tree .c .dot{position:absolute;z-index:1;left:1px;top:16px;width:9px;height:9px;border-radius:50%;background:var(--card);border:1.5px solid var(--ink3)}
+.tree .c.key .dot{background:var(--red);border-color:var(--red)}
+.tree .c.self .dot{background:var(--ink);border-color:var(--ink)}
+.tree .c.self .n{font-weight:600}
+.tree .c.more::after{content:"";position:absolute;left:4.7px;top:30px;height:26px;border-left:2px dotted var(--ink3);opacity:.7}
+.treebox .cap b.mo{display:inline-block;height:12px;border-left:2px dotted var(--ink3);margin:0 7px 0 4px;vertical-align:-1px;opacity:.7}
+.treebox .cap i.m{background:var(--ink);border-color:var(--ink)}
+.tree .n{font-family:var(--serif-tc);font-size:17px;letter-spacing:.04em;line-height:1.5;color:var(--ink)}
+.tree .n a{text-decoration:none;color:var(--red);font-weight:600}
+.tree .n a:hover{border-bottom:1px solid currentColor}
+.tree .sp{font-family:var(--serif-sc);font-size:12.5px;letter-spacing:0;color:var(--ink3);margin-left:6px;white-space:nowrap}
+.tree .sp a{color:var(--red);text-decoration:none;border-bottom:1px solid currentColor}
+.tree .t{font-size:12.5px;color:var(--ink2);line-height:1.55;margin-top:1px}
+.tree .c.etc .n a{font-weight:400;font-size:15px}
+.tree svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.tree svg path{fill:none;stroke:var(--ink3);stroke-opacity:.5;stroke-width:1.2;transition:stroke .15s}
+.tree svg path.on{stroke:var(--red);stroke-opacity:.9;stroke-width:1.8}
+.tree .c.path .dot{border-color:var(--red)}
+.tree .c.path>.n{color:var(--red)}
+.tree .c[title]{cursor:default}
+.people{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.pc{display:block;scroll-margin-top:24px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px 18px;box-shadow:var(--shadow);transition:border-color .15s}
+.pc:hover{border-color:var(--red2)}
+.pc h3 a{text-decoration:none;color:var(--ink)}
+.pc h3 a:hover{color:var(--red)}
+.pc.hl{animation:ring 1.6s ease-out}
+@keyframes ring{0%,35%{border-color:var(--red);box-shadow:0 0 0 4px rgba(203,101,62,.28),var(--shadow)}100%{box-shadow:0 0 0 4px rgba(203,101,62,0),var(--shadow)}}
+@media (prefers-reduced-motion:reduce){.pc.hl{animation:none;border-color:var(--red);box-shadow:0 0 0 4px rgba(203,101,62,.28),var(--shadow)}}
+.pc .up{color:var(--ink3);text-decoration:none;margin-left:auto}
+.pc .up:hover{color:var(--red)}
+.pc h3{font-family:var(--serif-tc);font-weight:600;font-size:22px;letter-spacing:.08em;margin:0;line-height:1.4}
+.pc h3 small{font-family:var(--serif-sc);font-weight:400;font-size:14px;color:var(--ink3);letter-spacing:0;margin-left:10px}
+.pc .meta{font-size:13px;color:var(--ink3);margin-top:2px}
+.pc .meta span+span::before{content:"·";margin:0 .6em}
+.pc p{margin:10px 0 0;color:var(--ink2)}
+.pc .ft{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 16px;margin-top:12px;font-family:var(--sans);font-size:13px}
+.pc .cnt{color:var(--ink3)}
+.pc .go{color:var(--red);text-decoration:none;font-weight:600}
+.pc .go:hover{text-decoration:underline}
+.treebox{scroll-margin-top:16px}
+@media (max-width:600px){
+  .wrap{padding-top:32px}
+  h1{font-size:24px}
+  .treebox{padding:16px 0 10px 12px}
+  .treebox .cap{padding-right:12px}
+  .tree{min-width:1040px}
+  .treebox .hint{display:inline}
+  .pc{padding:16px 16px 14px}
+  .pc h3{font-size:19px}
+  .pc h3 small{display:block;margin:2px 0 0;font-size:13px}
+}
+</style>
+<style id="site-nav-css">
+.site-nav{background:#f6eddb;border-bottom:1px solid #dccaa8;font-family:-apple-system,"PingFang SC","Hiragino Sans GB","Noto Sans CJK SC","Microsoft YaHei",sans-serif;line-height:1.5}
+.site-nav .sn-in{max-width:var(--sn-w,1280px);margin:0 auto;padding:0 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.site-nav a{text-decoration:none}
+.site-nav .sn-home{font-family:"Noto Serif CJK TC","Source Han Serif TC","Noto Serif TC","Songti TC","STSongti-TC-Regular","PMingLiU",serif;font-size:15px;font-weight:600;letter-spacing:.1em;color:#2b231c;white-space:nowrap;padding:9px 0;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.site-nav .sn-home:hover{color:#a3422a}
+.site-nav .sn-links{display:flex;gap:22px;flex:none}
+.site-nav .sn-links a{font-size:14px;color:#5c4f42;letter-spacing:.06em;padding:9px 0 7px;border-bottom:2px solid transparent;white-space:nowrap}
+.site-nav .sn-links a:hover{color:#a3422a}
+.site-nav .sn-links a[aria-current]{color:#a3422a;border-bottom-color:rgba(163,66,42,.4)}
+.site-nav .sn-s{display:none}
+@media (max-width:420px){
+  .site-nav .sn-in{padding:0 14px;gap:8px}
+  .site-nav .sn-links{gap:14px}
+  .site-nav .sn-home{font-size:14px;letter-spacing:.06em}
+  .site-nav .sn-links a{font-size:13.5px;letter-spacing:.02em}
+}
+@media (max-width:374px){.site-nav .sn-f{display:none}.site-nav .sn-s{display:inline}}
+@media print{.site-nav{display:none}}
+</style>
+</head>
+<body>
+<!--site-nav active="renwu" root="../"--><nav class="site-nav" aria-label="全站"><div class="sn-in">
+  <a class="sn-home" href="../"><span class="sn-f">才元刘氏先世著作</span><span class="sn-s">才元刘氏</span></a>
+  <div class="sn-links"><a href="../zhuzuo/">著作</a><a href="../renwu/" aria-current="true">人物</a><a href="../huaxu/">花絮</a><a href="../search/">搜索</a><a href="../#zhengli">关于</a></div>
+</div></nav><!--/site-nav-->
+<div class="wrap">
+<h1>人物小传</h1>
+<div class="by">才元刘氏廿二世天霖 整理，二〇二六年</div>
+<p class="lead">本站各书的作者，以及与这些书相关的几位先人，各写一篇小传。每篇先是正文，后面是全部原始资料：原文、白话和原书影印页对照，点「影印」可看原页。材料来自《刘氏家乘》支谱、乾隆《天津府志》、光绪《重修天津府志》、《陕西通志》等方志，《高城劉蔭渠先生傳》《鹽山劉蔭渠公行述》，乡试、会试齿录，清实录、缙绅录，以及各人诗文集的序跋。每篇末尾列出所据；说法不一之处照录两说。生卒年凡未注明者，是材料里没有记载。</p>
+<p class="dl" style="margin-top:18px">下载全部资料：<a download="" href="../renwu/dl/人物小传_全部资料_上（十世至十五世）.zip">上（十世至十五世）</a>　<a download="" href="../renwu/dl/人物小传_全部资料_下（十六世至十八世）.zip">下（十六世至十八世）</a><span>（两个 zip，各约 50 MB：十八篇小传的录文、白话与全部影印页；每篇末另有单篇下载）</span></p>
+<section class="treebox" id="shixi" aria-label="世系"><div class="cap"><span>世系据《刘氏家乘》支谱。左为本栏目各篇所及的国裕公一支，右为整理者所出的国祚公一支</span><span><i class="k"></i>有小传，点名字看简介</span><span><i></i>只作世次连接</span><span><i class="m"></i>整理者</span><span><b class="mo"></b>下有后人，未列出</span><span class="hint">← 左右滑动查看全图 →</span></div><div class="tscroll"><div class="tree" id="tree" style="--cols:8"><div class="g" style="grid-row:1">八世</div><div class="g" style="grid-row:2">九世</div><div class="g" style="grid-row:3">十世</div><div class="g" style="grid-row:4">十一世</div><div class="g" style="grid-row:5">十二世</div><div class="g" style="grid-row:6">十三世</div><div class="g" style="grid-row:7">十四世</div><div class="g" style="grid-row:8">十五世</div><div class="g" style="grid-row:9">十六世</div><div class="g" style="grid-row:10">十七世</div><div class="g" style="grid-row:11">十八世</div><div class="g" style="grid-row:12">十九世</div><div class="g" style="grid-row:13">二十世</div><div class="g" style="grid-row:14">廿一世</div><div class="g" style="grid-row:15">廿二世</div><div class="c" id="t-yw" style="grid-row:1;grid-column:2"><i class="dot"></i><div class="n">应文</div></div><div class="c" id="t-gy" data-p="yw" style="grid-row:2;grid-column:2"><i class="dot"></i><div class="n">国裕</div></div><div class="c key" id="t-zl" data-p="gy" title="字雨若，号甘露；1626—1673" style="grid-row:3;grid-column:2"><i class="dot"></i><div class="n"><a href="#zelin">泽霖</a></div><div class="t">字雨若，号甘露</div></div><div class="c" id="t-xw" data-p="zl" style="grid-row:4;grid-column:2"><i class="dot"></i><div class="n">绪武</div></div><div class="c" id="t-song" data-p="xw" style="grid-row:5;grid-column:2"><i class="dot"></i><div class="n">嵩</div></div><div class="c key" id="t-td" data-p="song" title="字飏言，号逸墅；1723—1793" style="grid-row:6;grid-column:2"><i class="dot"></i><div class="n"><a href="#tingdui">廷对</a></div><div class="t">字飏言，号逸墅</div></div><div class="c key" id="t-jn" data-p="td" title="字研圃，号樗园；1750—1809" style="grid-row:7;grid-column:2"><i class="dot"></i><div class="n"><a href="#jingnian">静年</a><span class="sp">配<a href="#houshi">侯氏</a></span></div><div class="t">字研圃，号樗园</div></div><div class="c key" id="t-zx" data-p="jn" title="字毓源，号荫渠；1770—1845" style="grid-row:8;grid-column:2"><i class="dot"></i><div class="n"><a href="#zengxuan">曾璇</a><span class="sp">继配<a href="#wushi">吴氏</a></span></div><div class="t">字毓源，号荫渠</div></div><div class="c key" id="t-za" data-p="jn" title="字谐云，号耐山；1773—1847" style="grid-row:8;grid-column:5"><i class="dot"></i><div class="n"><a href="#zengao">曾璈</a></div><div class="t">字谐云，号耐山</div></div><div class="c key" id="t-zk" data-p="jn" title="字鸣宸，号槑舲；1789—1847" style="grid-row:8;grid-column:6"><i class="dot"></i><div class="n"><a href="#zengke">曾珂</a></div><div class="t">字鸣宸，号槑舲</div></div><div class="c key etc more" id="t-zxd" data-p="jn" title="曾璞、曾瑜、曾珊、曾璘、曾珹、曾莹合传" style="grid-row:8;grid-column:7"><i class="dot"></i><div class="n"><a href="#zengxiongdi">等九子</a></div><div class="t">曾璞、曾瑜、曾珊、曾璘、曾珹、曾莹合传</div></div><div class="c key" id="t-qy" data-p="zx" title="字景辛，号春潭；1794—1859" style="grid-row:9;grid-column:2"><i class="dot"></i><div class="n"><a href="#qingyuan">庆元</a></div><div class="t">字景辛，号春潭</div></div><div class="c key" id="t-qk" data-p="zx" title="字绍阳，号颛夫；1795—1878" style="grid-row:9;grid-column:3"><i class="dot"></i><div class="n"><a href="#qingkai">庆凯</a></div><div class="t">字绍阳，号颛夫</div></div><div class="c key more" id="t-qd" data-p="za" style="grid-row:9;grid-column:5"><i class="dot"></i><div class="n"><a href="#wuchen">庆第</a></div><div class="t">曾璈嗣子；同治七年团练阵亡</div></div><div class="c key more" id="t-qj" data-p="zk" title="字芙裳，号念陔，又号筱舲；1821—？" style="grid-row:9;grid-column:6"><i class="dot"></i><div class="n"><a href="#qingji">庆集</a></div><div class="t">字芙裳，号念陔，又号筱舲</div></div><div class="c key more" id="t-gyao" data-p="qy" title="字香崖；1816—1874" style="grid-row:10;grid-column:2"><i class="dot"></i><div class="n"><a href="#guiyao">溎烑</a></div><div class="t">字香崖</div></div><div class="c key" id="t-gz" data-p="qk" title="字曼贞，号南茳；1819—1879" style="grid-row:10;grid-column:3"><i class="dot"></i><div class="n"><a href="#guizheng">溎炡</a></div><div class="t">字曼贞，号南茳</div></div><div class="c key more" id="t-gyu" data-p="qk" title="字东蕴，号星岑；斋号梅抱簃、得所得盦；1836—1903" style="grid-row:10;grid-column:4"><i class="dot"></i><div class="n"><a href="#guiyu">溎焴</a></div><div class="t">字东蕴，号星岑</div></div><div class="c key more" id="t-cr" data-p="gz" title="字济臣，号渔士，别号雪昙；1844—1912" style="grid-row:11;grid-column:3"><i class="dot"></i><div class="n"><a href="#chuanren">传任</a></div><div class="t">字济臣，号渔士，别号雪昙</div></div><div class="c" id="t-yi" data-p="xw" style="grid-row:5;grid-column:8"><i class="dot"></i><div class="n">嶬</div></div><div class="c" id="t-tx" data-p="yi" style="grid-row:6;grid-column:8"><i class="dot"></i><div class="n">体巽</div></div><div class="c" id="t-xf" data-p="tx" style="grid-row:7;grid-column:8"><i class="dot"></i><div class="n">锡范</div></div><div class="c" id="t-yc" data-p="xf" style="grid-row:8;grid-column:8"><i class="dot"></i><div class="n">瑶池</div></div><div class="c key more" id="t-ye" data-p="yc" title="字韡村，号韵泉；1817—1868" style="grid-row:9;grid-column:8"><i class="dot"></i><div class="n"><a href="#yuee">曰萼</a></div><div class="t">字韡村，号韵泉</div></div><div class="c" id="t-gzu" data-p="yw" style="grid-row:2;grid-column:9"><i class="dot"></i><div class="n">国祚</div></div><div class="c" id="t-zj" data-p="gzu" style="grid-row:3;grid-column:9"><i class="dot"></i><div class="n">泽久</div></div><div class="c" id="t-zw" data-p="zj" style="grid-row:4;grid-column:9"><i class="dot"></i><div class="n">振武</div></div><div class="c" id="t-yiy" data-p="zw" style="grid-row:5;grid-column:9"><i class="dot"></i><div class="n">峄</div></div><div class="c" id="t-jk" data-p="yiy" style="grid-row:6;grid-column:9"><i class="dot"></i><div class="n">际可</div></div><div class="c" id="t-cl" data-p="jk" style="grid-row:7;grid-column:9"><i class="dot"></i><div class="n">存礼</div></div><div class="c" id="t-cs" data-p="cl" style="grid-row:8;grid-column:9"><i class="dot"></i><div class="n">醇思</div></div><div class="c" id="t-yq" data-p="cs" style="grid-row:9;grid-column:9"><i class="dot"></i><div class="n">逾群</div></div><div class="c" id="t-jc" data-p="yq" style="grid-row:10;grid-column:9"><i class="dot"></i><div class="n">景陈</div></div><div class="c" id="t-zlin" data-p="jc" style="grid-row:11;grid-column:9"><i class="dot"></i><div class="n">兆林</div></div><div class="c" id="t-js" data-p="zlin" style="grid-row:12;grid-column:9"><i class="dot"></i><div class="n">经顺</div></div><div class="c" id="t-wx" data-p="js" style="grid-row:13;grid-column:9"><i class="dot"></i><div class="n">吾绪</div><div class="t">祖父</div></div><div class="c" id="t-ht" data-p="wx" style="grid-row:14;grid-column:9"><i class="dot"></i><div class="n">海涛</div><div class="t">父亲</div></div><div class="c self" id="t-tl" data-p="ht" style="grid-row:15;grid-column:9"><i class="dot"></i><div class="n">天霖</div><div class="t">整理者</div></div><svg aria-hidden="true"></svg></div></div></section>
+
+<h2 class="sh" id="gen-10">十世</h2>
+<ul class="people">
+<li class="pc" id="zelin"><h3><a href="zelin/">泽霖公</a><small>字雨若，号甘露（墓志、府志如此；陈州志、康熙县志、《蒞鳳簡言》提要作字甘露）</small></h3><div class="meta"><span>1626—1673</span><span>九世国裕公长子</span></div><p>清初的地方官。在汉中修堤、赎回被兵营扣押的百姓子女，在凤翔清理积欠、争得豁免；罢官回乡后倡修县志、学宫。身后二十年，汉中士民请他入祀名宦祠。</p><div class="ft"><span class="cnt">资料 13 条 · 影印 37 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="zelin/">阅读小传 ›</a></div></li>
+</ul>
+
+<h2 class="sh" id="gen-13">十三世</h2>
+<ul class="people">
+<li class="pc" id="tingdui"><h3><a href="tingdui/">廷对公</a><small>字飏言，号逸墅</small></h3><div class="meta"><span>1723—1793</span><span>十二世嵩公长子</span></div><p>早年为管家计中断学业，侍奉瘫痪的母亲十二年，开家塾、济族人，乡里称为「一乡之善士」；把读书的希望寄托在子孙身上。</p><div class="ft"><span class="cnt">资料 9 条 · 影印 20 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="tingdui/">阅读小传 ›</a></div></li>
+</ul>
+
+<h2 class="sh" id="gen-14">十四世</h2>
+<ul class="people">
+<li class="pc" id="jingnian"><h3><a href="jingnian/">静年公</a><small>字研圃，号樗园（家谱、行述作字砚浦，家谱又以研圃为号）</small></h3><div class="meta"><span>1750—1809</span><span>十三世廷对公之子</span></div><p>年轻时文名很盛，因父母生病放弃了科举，在家亲自教子；九个儿子里出了两个举人，「門風家法，遠近稱之」。</p><div class="ft"><span class="cnt">资料 15 条 · 影印 25 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="jingnian/">阅读小传 ›</a></div></li>
+<li class="pc" id="houshi"><h3><a href="houshi/">侯太淑人</a><small>静年公妻</small></h3><div class="meta"><span>约卒于嘉庆二十一年（1816）（推断）</span><span>封八品太孺人，诰赠淑人</span></div><p>静年公之妻，曾璇、曾璈等九兄弟之母。曾璇、曾璈兄弟小时候，《论语》《毛诗》是她口授的。</p><div class="ft"><span class="cnt">资料 6 条 · 影印 10 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="houshi/">阅读小传 ›</a></div></li>
+</ul>
+
+<h2 class="sh" id="gen-15">十五世</h2>
+<ul class="people">
+<li class="pc" id="zengxuan"><h3><a href="zengxuan/">曾璇公</a><small>字毓源，号荫渠</small></h3><div class="meta"><span>1770—1845</span><span>乾隆五十七年（1792）举人</span></div><p>少年时被称为「书橱」「神童」，会试屡次不中，做了二十多年县学、州学的老师；晚年引疾回乡，订成<a href="../chunqiu/">《春秋书法比义》</a>。</p><div class="ft"><span class="cnt">资料 25 条 · 影印 57 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="zengxuan/">阅读小传 ›</a></div></li>
+<li class="pc" id="wushi"><h3><a href="wushi/">吴太淑人</a><small>曾璇公继配，《雙榕樓詩稿》作者</small></h3><div class="meta"><span>1768—1845</span><span>沧州吴氏，甘肃按察使吴沂之女</span></div><p>庆元、庆凯二公的母亲。少年时从火场背出病母；教子极严，勉励做官的儿子「但得居官清似水」；有诗二十首传世。</p><div class="ft"><span class="cnt">资料 22 条 · 影印 12 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="wushi/">阅读小传 ›</a></div></li>
+<li class="pc" id="zengao"><h3><a href="zengao/">曾璈公</a><small>字谐云，号耐山</small></h3><div class="meta"><span>1773—1847</span><span>乾隆五十九年（1794）恩科举人</span></div><p>静年公第三子，与长兄曾璇公同学同业七十年；在高阳学舍写成《历代说约》，这部书后来到了同治帝的师傅倭仁手里。</p><div class="ft"><span class="cnt">资料 27 条 · 影印 49 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="zengao/">阅读小传 ›</a></div></li>
+<li class="pc" id="zengke"><h3><a href="zengke/">曾珂公</a><small>字鸣宸，号槑舲（又作梅舲）</small></h3><div class="meta"><span>1789—1847</span><span>静年公第九子</span></div><p>静年公之子，久居京城，诗酒旷达，擅长篆刻；做秦州州判三个月就有政声，卒于任上。</p><div class="ft"><span class="cnt">资料 11 条 · 影印 12 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="zengke/">阅读小传 ›</a></div></li>
+<li class="pc" id="zengxiongdi"><h3><a href="zengxiongdi/">静年公诸子</a><small>曾璞、曾瑜、曾珊、曾璘、曾珹、曾莹合传</small></h3><div class="meta"><span>十五世</span></div><p>静年公有九个儿子，时人称「八曾」或说九人「皆有學行」。除长子曾璇、三子曾璈、九子曾珂另有小传外，其余六人的零星材料都收在这里。</p><div class="ft"><span class="cnt">资料 13 条 · 影印 29 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="zengxiongdi/">阅读小传 ›</a></div></li>
+</ul>
+
+<h2 class="sh" id="gen-16">十六世</h2>
+<ul class="people">
+<li class="pc" id="qingyuan"><h3><a href="qingyuan/">庆元公</a><small>字景辛，号春潭（一作春坛）</small></h3><div class="meta"><span>1794—1859</span><span>嘉庆二十三年（1818）顺天副榜</span></div><p>曾璇公长子。久做京师官学教习，五十岁后才外放；在四川纳溪、资阳、仪陇、宜宾任上前后近十年，卒于仪陇任上。</p><div class="ft"><span class="cnt">资料 19 条 · 影印 43 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="qingyuan/">阅读小传 ›</a></div></li>
+<li class="pc" id="qingkai"><h3><a href="qingkai/">庆凯公</a><small>字绍阳，号颛夫</small></h3><div class="meta"><span>1795—1878</span><span>嘉庆二十四年（1819）举人，道光六年（1826）进士</span></div><p>在山东从知县做到道员，善于审案，入祀濮州名宦祠；咸丰三年防河后罢官回乡，刻印祖、父著作，主修同治《盐山县志》。</p><div class="ft"><span class="cnt">资料 17 条 · 影印 62 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="qingkai/">阅读小传 ›</a></div></li>
+<li class="pc" id="yuee"><h3><a href="yuee/">曰萼公</a><small>字韡村，号韵泉</small></h3><div class="meta"><span>1817—1868</span><span>道光二十年（1840）顺天乡试解元</span></div><p>二十四岁中顺天解元，此后六次会试不中，做了十几年学官；同治七年捻军攻盐山时殉难于城上。</p><div class="ft"><span class="cnt">资料 19 条 · 影印 25 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="yuee/">阅读小传 ›</a></div></li>
+<li class="pc" id="qingji"><h3><a href="qingji/">庆集公</a><small>字芙裳，号念陔，又号筱舲</small></h3><div class="meta"><span>1821—？</span><span>曾珂公之子</span></div><p>曾珂公的独子。擅篆书，为县学碑篆额；做了几十年学官，晚年在蓟州为族兄曰萼公的诗集写序。</p><div class="ft"><span class="cnt">资料 6 条 · 影印 14 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="qingji/">阅读小传 ›</a></div></li>
+<li class="pc" id="wuchen"><h3><a href="wuchen/">庆第公、溎焘公父子，及同治七年殉难诸人</a></h3><div class="meta"><span>十六、十七世</span></div><p>同治七年四月捻军攻破盐山，本族男子至少八人殉难，大多是团练；另有女眷殉节。</p><div class="ft"><span class="cnt">资料 7 条 · 影印 10 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="wuchen/">阅读小传 ›</a></div></li>
+</ul>
+
+<h2 class="sh" id="gen-17">十七世</h2>
+<ul class="people">
+<li class="pc" id="guizheng"><h3><a href="guizheng/">溎炡公</a><small>字曼贞，号南茳</small></h3><div class="meta"><span>1819—1879</span><span>庆凯公长子</span></div><p>参与编纂同治《盐山县志》；同治七年捻军攻破盐山后，编成<a href="../yujie/">《鹽山節義錄》</a>。书没有刻印，总叙《禦捻紀略》和部分殉难者名单保存在光绪《重修天津府志》里。贺涛、吴汝纶称他「號稱博學，爲時大師」。</p><div class="ft"><span class="cnt">资料 26 条 · 影印 41 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="guizheng/">阅读小传 ›</a></div></li>
+<li class="pc" id="guiyu"><h3><a href="guiyu/">溎焴公</a><small>字东蕴，号星岑；斋号梅抱簃、得所得盦</small></h3><div class="meta"><span>1836—1903</span><span>庆凯公次子</span></div><p>在京做了多年内阁中书，京察一等外放贵州镇远知府。同光年间与京城翰林、内阁中的文人往来很多。族叔曰萼公的诗由他抄存，编印成<a href="../qieshan/">《篋山詩草》</a>。</p><div class="ft"><span class="cnt">资料 28 条 · 影印 64 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="guiyu/">阅读小传 ›</a></div></li>
+<li class="pc" id="guiyao"><h3><a href="guiyao/">溎烑公</a><small>字香崖</small></h3><div class="meta"><span>1816—1874</span><span>庆元公长子，曾璇公长孙</span></div><p>庆元公长子，曾璇公的长孙。从府经历做起，咸丰八年在山东随军捕匪，保举知县，同治十一年补授日照知县。</p><div class="ft"><span class="cnt">资料 9 条 · 影印 10 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="guiyao/">阅读小传 ›</a></div></li>
+</ul>
+
+<h2 class="sh" id="gen-18">十八世</h2>
+<ul class="people">
+<li class="pc" id="chuanren"><h3><a href="chuanren/">传任公</a><small>字济臣，号渔士，别号雪昙</small></h3><div class="meta"><span>1844—1912</span><span>溎炡公长子</span></div><p>溎炡公长子。在河南以候补知县的身份署理多县，光绪二十一年（1895）被河南巡抚参劾「志趣不端」而革职；回乡后著书，内容涉及史学和立宪。</p><div class="ft"><span class="cnt">资料 11 条 · 影印 12 页</span><a class="up" href="#shixi">↑ 世系图</a><a class="go" href="chuanren/">阅读小传 ›</a></div></li>
+</ul>
+
+<div class="note">这些小传是根据目前找到的材料写的，还有不少空白：多数人的生卒年不详，许多著作只知书名。如果您知道哪位先人的事迹、墓地、手迹或著作下落，欢迎告诉我们。各条材料的影印件和录文，整理者都有存档。</div>
+
+<footer>相关：<a href="../shumu/">待查书目</a>　·　<a href="../#shixi">世系</a>　·　<a href="../huaxu/">整理花絮</a><br/>
+  小传由整理者据上列材料、在 Claude 协助下写成，可能有误，欢迎指正。</footer>
+</div>
+<script>
+(function(){
+var tree=document.getElementById('tree');if(!tree)return;
+function draw(){
+  var box=tree.getBoundingClientRect(),svg=tree.querySelector('svg'),d='',r=8;
+  function pt(el){var b=el.querySelector('.dot').getBoundingClientRect();return [b.left+b.width/2-box.left,b.top+b.height/2-box.top];}
+  tree.querySelectorAll('.c[data-p]').forEach(function(c){
+    var p=document.getElementById('t-'+c.dataset.p);if(!p)return;
+    var a=pt(p),b=pt(c),q;
+    if(Math.abs(a[0]-b[0])<1)q='M'+a[0]+','+a[1]+' V'+b[1];
+    else{var ym=c.getBoundingClientRect().top-box.top-6,s=b[0]>a[0]?1:-1;
+      q='M'+a[0]+','+a[1]+' V'+(ym-r)+' Q'+a[0]+','+ym+' '+(a[0]+s*r)+','+ym+' H'+(b[0]-s*r)+' Q'+b[0]+','+ym+' '+b[0]+','+(ym+r)+' V'+b[1];}
+    d+='<path data-c="'+c.id+'" d="'+q+'"/>';
+  });
+  svg.innerHTML=d;
+}
+draw();addEventListener('resize',draw);if(document.fonts)document.fonts.ready.then(draw);
+/* 悬停或聚焦：标出到始祖的一路 */
+function mark(c){tree.querySelectorAll('.path').forEach(function(x){x.classList.remove('path')});
+  tree.querySelectorAll('path.on').forEach(function(x){x.classList.remove('on')});
+  while(c){c.classList.add('path');var e=tree.querySelector('path[data-c="'+c.id+'"]');if(e)e.classList.add('on');
+    c=c.dataset.p?document.getElementById('t-'+c.dataset.p):null;}}
+tree.querySelectorAll('.c').forEach(function(c){
+  c.addEventListener('mouseenter',function(){mark(c)});c.addEventListener('mouseleave',function(){mark(null)});
+  c.addEventListener('focusin',function(){mark(c)});c.addEventListener('focusout',function(){mark(null)});});
+var still=matchMedia('(prefers-reduced-motion: reduce)').matches,tm;
+function focusCard(id,smooth){var c=document.getElementById(id);if(!c||!c.classList.contains('pc'))return false;
+  c.scrollIntoView({behavior:smooth&&!still?'smooth':'auto',block:innerHeight>c.offsetHeight+80?'center':'start'});
+  c.classList.remove('hl');void c.offsetWidth;c.classList.add('hl');clearTimeout(tm);tm=setTimeout(function(){c.classList.remove('hl')},1600);return true;}
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
+  if(id==='shixi'){e.preventDefault();tree.closest('.treebox').scrollIntoView({behavior:still?'auto':'smooth'});history.replaceState(null,'','#shixi');return;}
+  if(focusCard(id,true)){e.preventDefault();history.replaceState(null,'','#'+id);}});
+if(location.hash)addEventListener('load',function(){focusCard(location.hash.slice(1),false)});
+addEventListener('hashchange',function(){focusCard(location.hash.slice(1),true)});
+})();
+</script>
+</body>
+</html>
